@@ -1,8 +1,8 @@
 async function loadComponents() {
   try {
     const [headerRes, footerRes] = await Promise.all([
-      fetch("/public/html/header.html"),
-      fetch("/public/html/footer.html"),
+      fetch("/html/header.html"),
+      fetch("/html/footer.html"),
     ]);
 
     const headerData = await headerRes.text();
