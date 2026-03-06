@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You - Grow Tech</title>
+
+  <!-- SEO & Meta -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Thank you for contacting Grow Tech. We’ll be in touch soon!">
+  <meta name="author" content="Grow Tech Team">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .thank-you-box {
+      background-color: rgba(255, 255, 255, 0.04);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 255, 195, 0.3);
+      max-width: 600px;
+      animation: fadeIn 1.2s ease-in-out;
+      border: 2px solid rgba(0, 255, 195, 0.2);
+      backdrop-filter: blur(6px);
+    }
+
+    .thank-you-box h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, #00bfff, #00ffc3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .thank-you-box p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #00bfff, #00ffc3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .emoji {
+      background: none !important;
+      -webkit-background-clip: initial !important;
+      -webkit-text-fill-color: initial !important;
+      color: #ffffff;
+    }
+
+    .thank-you-box a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #00bfff, #00ffc3); /* Blue → Cyan */
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: 0 0 12px #00ffc3, 0 0 20px #00bfff; /* Button Glow */
+    }
+
+    .thank-you-box a:hover {
+      background: linear-gradient(135deg, #00aee0, #00dab0);
+      transform: scale(1.05);
+      box-shadow: 0 0 16px #00ffc3, 0 0 32px #00bfff;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .thank-you-box h1 {
+        font-size: 28px;
+      }
+      .thank-you-box p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thank-you-box">
+    <h1><span class="emoji">🎉</span> Thank You!</h1>
+    <p><span class="emoji">✅</span> Your message has been successfully sent.<br>We’ll be in touch shortly.</p>
+    <a href="index.html"><span class="emoji">⬅</span> Back to Home</a>
+  </div>
+
+</body>
+</html>

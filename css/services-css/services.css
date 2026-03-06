@@ -1,0 +1,313 @@
+/* Service List Styles */
+.services-list-section {
+  background-color: #0d102a; /* তোর ডার্ক ব্লু ব্যাকগ্রাউন্ড */
+  padding: 100px 20px;
+  color: #ffffff;
+  position: relative;
+}
+
+.services-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-subtitle {
+  color: #c9a86a; /* তোর গোল্ডেন কালার */
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.services-main-title {
+  font-family: cursive;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.services-main-title span {
+  color: #00ffff; /* সায়ান হাইলাইট */
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* Category Card Styling */
+.service-category-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 50px 40px;
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-category-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.7s;
+}
+
+.service-category-card:hover {
+  transform: translateY(-12px);
+  border-color: #c9a86a;
+  background: rgba(201, 168, 106, 0.03);
+}
+
+.service-category-card:hover::after {
+  left: 150%;
+}
+
+.category-icon i {
+  font-size: 3rem;
+  color: #c9a86a;
+  margin-bottom: 20px;
+}
+
+.service-category-card h3 {
+  font-family: "Bungee", cursive;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 25px;
+  border-bottom: 2px solid rgba(201, 168, 106, 0.3);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* List Items Styling */
+.service-items {
+  list-style: none;
+  padding: 0;
+}
+
+.service-items li {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* লিষ্টের শুরুতে গোল্ডেন টিক চিহ্ন */
+.service-items li::before {
+  content: "✦"; /* একটা টেক-স্টাইল স্টার বা টিক */
+  color: #c9a86a;
+  font-size: 1.2rem;
+}
+
+.services-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 70px;
+  padding-bottom: 20px;
+}
+
+.btn-premium-service {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 45px;
+  background-color: #c9a86a;
+  color: #0d102a;
+  font-family: "Bungee", cursive;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(201, 168, 106, 0.25);
+  border: 2px solid #c9a86a;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-premium-service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+  transform: skewX(-30deg);
+  animation: nonStopShine 1.5s infinite linear;
+  z-index: 2;
+}
+
+@keyframes nonStopShine {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+.btn-premium-service i {
+  font-size: 1.5rem;
+  transition: transform 0.4s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.btn-premium-service:hover {
+  background-color: transparent;
+  color: #c9a86a;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(201, 168, 106, 0.4);
+}
+
+.btn-premium-service:hover i {
+  transform: translateX(8px);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+
+/* ===== Large Laptop (1400px ↓) ===== */
+@media (max-width: 1400px) {
+  .services-container {
+    max-width: 1200px;
+  }
+
+  .services-main-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* ===== Laptop (1200px ↓) ===== */
+@media (max-width: 1200px) {
+  .services-list-section {
+    padding: 80px 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .service-category-card {
+    padding: 40px 30px;
+  }
+
+  .service-category-card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ===== Tablet (992px ↓) ===== */
+@media (max-width: 992px) {
+  .services-header {
+    margin-bottom: 50px;
+  }
+
+  .services-main-title {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .service-items li {
+    font-size: 1rem;
+  }
+}
+
+/* ===== Mobile Large (768px ↓) ===== */
+@media (max-width: 768px) {
+  .services-list-section {
+    padding: 70px 15px;
+  }
+
+  .services-main-title {
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
+
+  .services-subtitle {
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-category-card {
+    padding: 35px 25px;
+    border-radius: 18px;
+  }
+
+  .category-icon i {
+    font-size: 2.5rem;
+  }
+
+  .service-category-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .services-cta {
+    margin-top: 50px;
+  }
+
+  .btn-premium-service {
+    padding: 14px 35px;
+    font-size: 1rem;
+  }
+}
+
+/* ===== Small Mobile (480px ↓) ===== */
+@media (max-width: 480px) {
+  .services-main-title {
+    font-size: 1.5rem;
+  }
+
+  .service-items li {
+    font-size: 0.95rem;
+    gap: 10px;
+  }
+
+  .btn-premium-service {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 13px 20px;
+  }
+
+  .btn-premium-service i {
+    font-size: 1.3rem;
+  }
+}

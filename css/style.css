@@ -1,0 +1,35 @@
+:root {
+  --primary: #0044cc;
+  --dark: #001f4d;
+  --light: #f0f4ff;
+  --text: #ffffff;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.premium-divider {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ff8c00, #ffd700);
+  border-radius: 2px;
+  background-size: 200% 100%;
+  animation: premiumLineAnim 3s linear infinite;
+}

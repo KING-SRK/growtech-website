@@ -1,0 +1,125 @@
+/* ===== Footer Base Styles ===== */
+body .footer {
+  background: linear-gradient(135deg, #101820, #1c1f2b);
+  color: white;
+  text-align: center;
+  padding: 25px 10%;
+  font-size: 15px;
+  border-top: 2px solid rgba(255,255,255,0.1);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body .footer p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+body .footer-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 500;
+}
+
+body .footer-links span {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Link Base Style */
+body .footer-links a {
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+/* Underline Animation (middle outwards) */
+body .footer-links a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+body .footer-links a:hover::after {
+  width: 100%;
+}
+
+/* ==== Social Specific Styles ==== */
+body .footer-links .facebook {
+  color: #1877f2;
+  text-shadow: 0 0 10px #1877f2;
+}
+body .footer-links .facebook::after {
+  background-color: #1877f2;
+}
+
+body .footer-links .instagram {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 100, 200, 0.7);
+}
+body .footer-links .instagram::after {
+  background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+body .footer-links .twitter {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffffff;
+}
+body .footer-links .twitter::after {
+  background-color: #ffffff;
+}
+
+body .footer-links .linkedin {
+  color: #0077b5;
+  text-shadow: 0 0 10px #0077b5;
+}
+body .footer-links .linkedin::after {
+  background-color: #0077b5;
+}
+
+body .footer-links .youtube {
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+}
+body .footer-links .youtube::after {
+  background-color: #ff0000;
+}
+
+/* ===== Dark Mode Override for Footer ===== */
+body.dark-mode .footer {
+  background: linear-gradient(135deg, #0d1117, #161b22);
+  color: #e0e0e0;
+}
+
+body.dark-mode .footer-links span {
+  color: rgba(255, 255, 255, 0.3);
+}
+body.dark-mode .footer-links a {
+  color: #ccc;
+}
+body.dark-mode .footer-links a:hover {
+  color: #58a6ff;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  body .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  body .footer-links span {
+    display: none;
+  }
+}

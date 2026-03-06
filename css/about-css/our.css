@@ -1,0 +1,245 @@
+.team-trio-section {
+  background-color: #0d102a;
+  padding: 100px 20px;
+  color: #ffffff;
+}
+
+.trio-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trio-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.trio-subtitle {
+  color: #c9a86a; /* Golden */
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.trio-title {
+  font-family: "Bungee", cursive;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.trio-title span {
+  color: #00ffff; /* Cyan/Cyan-ish */
+}
+
+/* Grid Layout */
+.trio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* Card Styling */
+.trio-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 106, 0.2);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.trio-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.7s;
+}
+
+.trio-card:hover {
+  transform: translateY(-10px);
+  border-color: #c9a86a;
+  background: rgba(201, 168, 106, 0.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.trio-card:hover::after {
+  left: 150%;
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: #c9a86a;
+}
+
+.card-image-placeholder img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.2));
+}
+
+.trio-card h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.trio-card .role {
+  color: #00ffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.trio-card p {
+  font-size: 1rem;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.card-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 4px;
+  background: #c9a86a;
+  transition: width 0.4s ease;
+}
+
+.trio-card:hover .card-line {
+  width: 100%;
+}
+
+/* =========================
+   TEAM TRIO RESPONSIVE
+========================= */
+
+/* ===== Large Laptop (1400px ↓) ===== */
+@media (max-width: 1400px) {
+  .trio-container {
+    max-width: 1100px;
+  }
+
+  .trio-title {
+    font-size: 2.3rem;
+  }
+}
+
+/* ===== Laptop (1200px ↓) ===== */
+@media (max-width: 1200px) {
+  .team-trio-section {
+    padding: 90px 25px;
+  }
+
+  .trio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .trio-card {
+    padding: 35px 25px;
+  }
+}
+
+/* ===== Tablet (992px ↓) ===== */
+@media (max-width: 992px) {
+  .team-trio-section {
+    padding: 80px 20px;
+  }
+
+  .trio-header {
+    margin-bottom: 50px;
+  }
+
+  .trio-title {
+    font-size: 2rem;
+  }
+
+  .trio-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .trio-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Mobile Large (768px ↓) ===== */
+@media (max-width: 768px) {
+  .trio-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .trio-title {
+    font-size: 1.7rem;
+  }
+
+  .trio-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+
+  .trio-card {
+    padding: 30px 22px;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===== Small Mobile (480px ↓) ===== */
+@media (max-width: 480px) {
+  .team-trio-section {
+    padding: 70px 15px;
+  }
+
+  .trio-title {
+    font-size: 1.5rem;
+  }
+
+  .trio-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .trio-card .role {
+    font-size: 0.8rem;
+  }
+
+  .trio-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+}
+
+/* ===== Extra Small (360px ↓) ===== */
+@media (max-width: 360px) {
+  .trio-title {
+    font-size: 1.3rem;
+  }
+
+  .trio-card {
+    padding: 25px 18px;
+  }
+}

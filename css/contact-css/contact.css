@@ -1,0 +1,338 @@
+/* Grow Tech - Contact Page Styles (Unique Classes) */
+:root {
+  --contact-bg: #0d102a;
+  --contact-panel: rgba(255, 255, 255, 0.03);
+  --contact-gold: #c9a86a;
+  --contact-cyan: #00ffff;
+  --contact-white: #ffffff;
+  --contact-muted: #9ca3af;
+  --contact-border: rgba(201, 168, 106, 0.2);
+  --contact-speed: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.contact-page-wrapper {
+  background-color: var(--contact-bg);
+  font-family: "Inter", sans-serif;
+  color: var(--contact-white);
+  padding-bottom: 80px;
+}
+
+/* Header Section */
+.contact-premium-header {
+  text-align: center;
+  padding: 100px 0 60px;
+}
+
+.contact-label {
+  color: var(--contact-gold);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-main-title {
+  font-family: "Bungee", cursive;
+  font-size: 3rem;
+  color: var(--contact-white);
+}
+
+.contact-main-title span {
+  color: var(--contact-cyan);
+}
+
+.contact-subtitle {
+  color: var(--contact-muted);
+  max-width: 600px;
+  margin: 15px auto;
+  font-size: 1.1rem;
+}
+
+.contact-gold-divider {
+  height: 4px;
+  width: 80px;
+  background: var(--contact-gold);
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(201, 168, 106, 0.3);
+}
+
+/* Grid Layout */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* Form Styling */
+.contact-form-container {
+  background: var(--contact-panel);
+  border: 1px solid var(--contact-border);
+  padding: 50px;
+  border-radius: 20px;
+  transition: var(--contact-speed);
+}
+
+.contact-form-container:hover {
+  border-color: var(--contact-gold);
+  background: rgba(201, 168, 106, 0.05);
+}
+
+.contact-main-form {
+  display: grid;
+  gap: 25px;
+}
+
+.contact-input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-field label {
+  font-size: 0.8rem;
+  color: var(--contact-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.contact-field input,
+.contact-field textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: inherit;
+  transition: var(--contact-speed);
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--contact-cyan);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+}
+
+.contact-full-width {
+  grid-column: 1 / -1;
+}
+
+.contact-submit-btn {
+  background: var(--contact-gold);
+  border: none;
+  padding: 18px;
+  border-radius: 10px;
+  color: #0d102a;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+  transition: var(--contact-speed);
+}
+
+.contact-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(201, 168, 106, 0.3);
+}
+
+/* Sidebar Styling */
+.contact-info-sidebar {
+  background: var(--contact-panel);
+  border: 1px solid var(--contact-border);
+  padding: 40px;
+  border-radius: 20px;
+  height: fit-content;
+}
+
+.contact-info-card h3 {
+  font-family: "Bungee", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.contact-detail-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.contact-icon-box {
+  font-size: 1.6rem;
+  color: var(--contact-gold);
+  width: 40px;
+  text-align: center;
+}
+
+.contact-text span {
+  font-size: 0.7rem;
+  color: var(--contact-cyan);
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+}
+
+.contact-text p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* CTA Card */
+.contact-cta-card {
+  text-align: center;
+  padding: 80px 40px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--contact-border);
+  border-radius: 30px;
+  transition: var(--contact-speed);
+}
+
+.contact-cta-card h2 {
+  font-family: "Bungee", cursive;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-secondary-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 40px;
+  border: 2px solid var(--contact-cyan);
+  color: var(--contact-cyan);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: var(--contact-speed);
+}
+
+.contact-secondary-btn:hover {
+  background: var(--contact-cyan);
+  color: #0d102a;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+/* ===============================
+   CONTACT PAGE RESPONSIVE
+================================ */
+
+/* ===== Large Laptop ===== */
+@media (max-width: 1400px) {
+  .contact-main-title {
+    font-size: 2.6rem;
+  }
+}
+
+/* ===== Laptop ===== */
+@media (max-width: 1200px) {
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-info-sidebar {
+    order: -1;
+  }
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 992px) {
+  .contact-premium-header {
+    padding: 80px 20px 50px;
+  }
+
+  .contact-main-title {
+    font-size: 2.2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-form-container {
+    padding: 40px;
+  }
+
+  .contact-input-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .contact-premium-header {
+    padding: 70px 15px 40px;
+  }
+
+  .contact-main-title {
+    font-size: 1.9rem;
+    line-height: 1.3;
+  }
+
+  .contact-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .contact-form-container {
+    padding: 30px;
+  }
+
+  .contact-info-sidebar {
+    padding: 30px;
+  }
+
+  .contact-cta-card {
+    padding: 60px 25px;
+  }
+
+  .contact-cta-card h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===== Small Mobile ===== */
+@media (max-width: 480px) {
+  .contact-main-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-label {
+    font-size: 0.75rem;
+  }
+
+  .contact-field input,
+  .contact-field textarea {
+    padding: 12px;
+  }
+
+  .contact-submit-btn {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .contact-detail-item {
+    gap: 15px;
+  }
+
+  .contact-icon-box {
+    font-size: 1.3rem;
+  }
+
+  .contact-text p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,267 @@
+:root {
+  --gt-bg: #0d102a;
+  --gt-gold: #c9a86a;
+  --gt-cyan: #00ffff;
+  --gt-muted: #9ca3af;
+  --gt-glass: rgba(255, 255, 255, 0.03);
+  --gt-border: rgba(201, 168, 106, 0.15);
+
+  /* Smooth Scroll Speeds */
+  --scroll-speed-fast: 5s;
+  --scroll-speed-long: 10s;
+  --return-speed: 1.5s; /* মাউস সরিয়ে নিলে ফিরে আসার গতি */
+}
+
+.gt-portfolio-section {
+  padding: 50px 20px;
+  background-color: var(--gt-bg);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.gt-portfolio-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- Hero --- */
+.gt-portfolio-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.gt-portfolio-main-title {
+  font-family: "Bungee", cursive;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 15px;
+}
+
+.gt-portfolio-main-title span {
+  color: var(--gt-cyan);
+}
+
+.gt-portfolio-subtitle {
+  color: var(--gt-gold);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- Grid --- */
+.gt-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+/* --- Card & Image Core --- */
+.gt-work-card {
+  background: var(--gt-glass);
+  border: 1px solid var(--gt-border);
+  border-radius: 25px;
+  overflow: hidden;
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.gt-work-card:hover {
+  border-color: var(--gt-cyan);
+  transform: translateY(-8px);
+}
+
+.gt-work-img-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #151a3a;
+  cursor: pointer;
+  /* গ্লিচ কমানোর জন্য */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.gt-scroll-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  /* ফিরে আসার সময় এই ট্রানজিশন কাজ করবে */
+  transition: transform var(--return-speed) ease-in-out !important;
+  will-change: transform;
+}
+
+/* মাউস নিলে স্মুথলি নিচে যাবে */
+.gt-work-card:hover .gt-scroll-img {
+  transition: transform var(--scroll-speed-fast) linear !important;
+  transform: translateY(calc(-100% + 380px));
+}
+
+/* লম্বা ফ্রেমের জন্য আলাদা গতি */
+.long-frame:hover .gt-scroll-img {
+  transition: transform var(--scroll-speed-long) linear !important;
+}
+
+/* Overlay */
+.gt-work-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 16, 42, 0.85), transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* ইমেজ স্ক্রোলে যাতে ডিস্টার্ব না করে */
+}
+
+.gt-work-card:hover .gt-work-overlay {
+  opacity: 1;
+}
+
+.gt-tech-tags span {
+  background: rgba(
+    201,
+    168,
+    106,
+    0.1
+  ); /* ব্যাকগ্রাউন্ডটা হালকা রাখলাম যাতে টেক্সট হাইলাইট হয় */
+  color: #c9a86a; /* সরাসরি কালার কোড দিলাম যাতে কোনো অস্বচ্ছতা না থাকে */
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem; /* সাইজটা একটু বাড়ালাম পড়ার সুবিধার জন্য */
+  font-weight: 600; /* টেক্সটটা একটু বোল্ড করলাম */
+  border: 1.5px solid #c9a86a; /* বর্ডারটা একটু মোটা আর সলিড করলাম */
+  margin-right: 8px;
+  display: inline-block;
+  text-transform: uppercase; /* একটু প্রফেশনাল লুক দেওয়ার জন্য */
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 10px rgba(201, 168, 106, 0.2); /* হালকা একটা গোল্ডেন গ্লো দিলাম */
+}
+
+.gt-visit-btn {
+  background: var(--gt-cyan);
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 15px;
+  pointer-events: auto; /* বাটন ক্লিকযোগ্য হবে */
+  width: fit-content;
+}
+
+/* Details */
+.gt-work-details {
+  padding: 25px;
+}
+.gt-work-details h3 {
+  color: var(--gt-gold);
+  margin-bottom: 8px;
+}
+.gt-work-details p {
+  color: var(--gt-muted);
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   PORTFOLIO RESPONSIVE
+================================ */
+
+/* Laptop (1200px) */
+@media (max-width: 1200px) {
+  .gt-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .gt-work-img-container {
+    height: 260px;
+  }
+}
+
+/* Tablet (992px) */
+@media (max-width: 992px) {
+  .gt-portfolio-hero {
+    margin-bottom: 60px;
+  }
+
+  .gt-portfolio-main-title {
+    font-size: 3rem;
+  }
+
+  .gt-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .gt-work-img-container {
+    height: 240px;
+  }
+}
+
+/* Large Mobile (768px) */
+@media (max-width: 768px) {
+  .gt-portfolio-section {
+    padding: 70px 20px;
+  }
+
+  .gt-portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .gt-work-img-container {
+    height: 230px;
+  }
+
+  .gt-work-details {
+    padding: 20px;
+  }
+
+  .gt-work-details h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small Mobile (480px) */
+@media (max-width: 480px) {
+  .gt-portfolio-main-title {
+    font-size: 2rem;
+  }
+
+  .gt-portfolio-desc {
+    font-size: 0.9rem;
+  }
+
+  .gt-work-img-container {
+    height: 200px;
+  }
+
+  .gt-tech-tags span {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .gt-visit-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Small (360px) */
+@media (max-width: 360px) {
+  .gt-portfolio-main-title {
+    font-size: 1.8rem;
+  }
+
+  .gt-work-img-container {
+    height: 180px;
+  }
+
+  .gt-work-details p {
+    font-size: 0.85rem;
+  }
+}

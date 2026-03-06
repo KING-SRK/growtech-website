@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://growtech-in.com/</loc>
+    <lastmod>2025-06-24</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://growtech-in.com/about</loc>
+    <lastmod>2025-06-24</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://growtech-in.com/service</loc>
+    <lastmod>2025-06-24</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://growtech-in.com/portfolio</loc>
+    <lastmod>2025-06-24</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://growtech-in.com/connect</loc>
+    <lastmod>2025-06-24</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+</urlset>
