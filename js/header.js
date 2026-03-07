@@ -45,16 +45,18 @@ function setActiveNavLink() {
 
 document.addEventListener("DOMContentLoaded", loadComponents);
 
-window.toggleMenu = function () {
+window.toggleMenu = function (btn) {
   const navMenu = document.getElementById("navMenu");
   const toggleBtn = document.querySelector(".menu-toggle");
 
   if (navMenu) {
     navMenu.classList.toggle("show");
-    toggleBtn.innerHTML = navMenu.classList.contains("show") ? "✖" : "☰";
+    // 'active' ক্লাস টগল করছি অ্যানিমেশনের জন্য
+    toggleBtn.classList.toggle("active");
   }
 };
 
+// মেনুর বাইরে ক্লিক করলে মেনু বন্ধ হওয়ার লজিক
 document.addEventListener("click", function (event) {
   const navMenu = document.getElementById("navMenu");
   const toggleBtn = document.querySelector(".menu-toggle");
@@ -62,7 +64,7 @@ document.addEventListener("click", function (event) {
   if (navMenu && toggleBtn) {
     if (!navMenu.contains(event.target) && !toggleBtn.contains(event.target)) {
       navMenu.classList.remove("show");
-      toggleBtn.innerHTML = "☰";
+      toggleBtn.classList.remove("active"); // ক্রস থেকে আবার হ্যামবার্গার হয়ে যাবে
     }
   }
 });

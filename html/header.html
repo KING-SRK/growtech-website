@@ -11,7 +11,9 @@
     <header class="main-header">
       <div class="logo">
         <img src="/images/logo.png" alt="Grow Tech Logo" class="logo-img" />
-        <span class="logo-text">Grow Tech</span>
+        <span class="logo-text"
+          >GROW<span class="tech-highlight">TECH</span></span
+        >
       </div>
 
       <nav class="nav" id="navMenu">
@@ -19,10 +21,17 @@
         <a href="/html/about.html">About Us</a>
         <a href="/html/services.html">Services</a>
         <a href="/html/portfolio.html">Portfolio</a>
-        <a href="/html/contact.html">Contact</a>
+        <a href="/html/contact.html" class="cta-mobile">Contact</a>
       </nav>
 
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="header-right">
+        <a href="/html/contact.html" class="header-cta">Let's Talk</a>
+        <div class="menu-toggle" onclick="toggleMenu(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </header>
 
     <div class="fake-header"></div>
