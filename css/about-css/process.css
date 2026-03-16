@@ -1,0 +1,207 @@
+.process-pipeline {
+  padding: 100px 20px;
+  background-color: #0d102a;
+  position: relative;
+}
+
+.pipeline-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.pipeline-header span {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pipeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Central Vertical Line */
+.pipeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #c9a86a, #00ffff, #c9a86a);
+  opacity: 0.3;
+}
+
+.pipeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* Dots on the line */
+.pipeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: #0d102a;
+  border: 2px solid #c9a86a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: 0.4s;
+}
+
+.pipeline-dot i {
+  font-size: 24px;
+  color: #00ffff;
+}
+
+.pipeline-item:hover .pipeline-dot {
+  background: #c9a86a;
+  box-shadow: 0 0 20px rgba(201, 168, 106, 0.5);
+}
+
+.pipeline-item:hover .pipeline-dot i {
+  color: #0d102a;
+}
+
+/* Alternating content left and right */
+.pipeline-content {
+  width: 42%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+.pipeline-item:nth-child(odd) .pipeline-content {
+  margin-right: auto;
+  text-align: right;
+}
+
+.pipeline-item:nth-child(even) .pipeline-content {
+  margin-left: auto;
+  text-align: left;
+}
+
+.pipeline-content:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.pipeline-content h3 {
+  font-family: "Bungee", cursive;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.pipeline-content p {
+  color: #9ca3af;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.gold-text {
+  color: #c9a86a;
+}
+.cyan-text {
+  color: #00ffff;
+}
+
+/* Responsive Styles for Process Pipeline */
+
+@media (max-width: 992px) {
+  .pipeline-content {
+    width: 45%; /* বড় ট্যাবলেটের জন্য একটু চওড়া করলাম */
+  }
+}
+
+@media (max-width: 768px) {
+  .process-pipeline {
+    padding: 50px 15px;
+  }
+
+  .pipeline-header h2 {
+    font-size: 2rem;
+  }
+
+  /* লাইনটাকে বাম দিকে সরিয়ে আনলাম */
+  .pipeline-container::before {
+    left: 30px;
+    transform: none;
+  }
+
+  /* ডটগুলোকে লাইনের ওপর সেট করলাম */
+  .pipeline-dot {
+    left: 30px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+  }
+
+  .pipeline-item {
+    justify-content: flex-start; /* সব কন্টেন্ট বাম দিক থেকে শুরু হবে */
+    margin-bottom: 40px;
+  }
+
+  /* অল্টারনেটিভ স্টাইল বন্ধ করে সব ডান দিকে নিয়ে এলাম */
+  .pipeline-item:nth-child(odd) .pipeline-content,
+  .pipeline-item:nth-child(even) .pipeline-content {
+    width: calc(100% - 80px); /* লাইনের জন্য জায়গা ছেড়ে বাকিটা কন্টেন্ট */
+    margin-left: 80px;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .pipeline-content {
+    padding: 20px;
+  }
+
+  .pipeline-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pipeline-header {
+    margin-bottom: 40px;
+  }
+  .pipeline-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .pipeline-container::before {
+    left: 20px;
+  }
+
+  .pipeline-dot {
+    left: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .pipeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .pipeline-dot i {
+    font-size: 18px;
+  }
+
+  .pipeline-item:nth-child(odd) .pipeline-content,
+  .pipeline-item:nth-child(even) .pipeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+}

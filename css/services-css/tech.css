@@ -1,0 +1,235 @@
+.tech-pulse-section {
+  padding: 100px 20px;
+  background-color: #0d102a;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pulse-header {
+  margin-bottom: 80px;
+}
+
+.pulse-container {
+  position: relative;
+  height: 500px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center Logo & Pulse */
+.pulse-center {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  z-index: 10;
+}
+
+.pulse-center img {
+  width: 100%;
+  filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.5));
+}
+
+.pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border: 2px solid #00ffff;
+  border-radius: 50%;
+  animation: pulseRipple 3s linear infinite;
+}
+
+@keyframes pulseRipple {
+  0% {
+    width: 120px;
+    height: 120px;
+    opacity: 1;
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+  }
+}
+
+/* Floating Orbit Icons */
+.tech-orbit-item {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: rgba(13, 16, 42, 0.8);
+  border: 1px solid rgba(201, 168, 106, 0.4);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  color: #c9a86a;
+  transition: 0.4s;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.tech-orbit-item:hover {
+  border-color: #00ffff;
+  color: #00ffff;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Positioning Icons in a Circle around the Center */
+.t-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.t-2 {
+  top: 25%;
+  right: 5%;
+}
+.t-3 {
+  bottom: 25%;
+  right: 5%;
+}
+.t-4 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.t-5 {
+  bottom: 25%;
+  left: 5%;
+}
+.t-6 {
+  top: 25%;
+  left: 5%;
+}
+
+/* Add Tooltip on Hover */
+.tech-orbit-item::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -30px;
+  font-size: 12px;
+  color: #fff;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.tech-orbit-item:hover::after {
+  opacity: 1;
+  bottom: -25px;
+}
+
+/* Responsive Styles for Tech Pulse Section */
+
+@media (max-width: 1024px) {
+  .pulse-container {
+    height: 450px;
+    max-width: 500px;
+  }
+
+  .tech-orbit-item {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-pulse-section {
+    padding: 50px 15px;
+  }
+
+  .pulse-header {
+    margin-bottom: 50px;
+  }
+
+  .pulse-container {
+    height: 400px;
+    max-width: 100%;
+  }
+
+  .pulse-center {
+    width: 100px;
+    height: 100px;
+  }
+
+  .tech-orbit-item {
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+  }
+
+  /* ছোট স্ক্রিনে অ্যানিমেশন সাইজ একটু কমানো হলো */
+  @keyframes pulseRipple {
+    0% {
+      width: 100px;
+      height: 100px;
+      opacity: 1;
+    }
+    100% {
+      width: 320px;
+      height: 320px;
+      opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .bold-title {
+    font-size: 1.8rem;
+  }
+
+  .pulse-container {
+    height: 350px;
+  }
+
+  .pulse-center {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tech-orbit-item {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 12px;
+  }
+
+  /* মোবাইলে পজিশন গুলো একটু ক্লোজ করে দেওয়া হলো যাতে স্ক্রিনের বাইরে না যায় */
+  .t-2 {
+    right: 0%;
+    top: 22%;
+  }
+  .t-3 {
+    right: 0%;
+    bottom: 22%;
+  }
+  .t-5 {
+    left: 0%;
+    bottom: 22%;
+  }
+  .t-6 {
+    left: 0%;
+    top: 22%;
+  }
+
+  @keyframes pulseRipple {
+    0% {
+      width: 80px;
+      height: 80px;
+      opacity: 1;
+    }
+    100% {
+      width: 280px;
+      height: 280px;
+      opacity: 0;
+    }
+  }
+}

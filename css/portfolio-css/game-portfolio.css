@@ -1,0 +1,224 @@
+:root {
+  --gt-bg: #07091a;
+  --gt-gold: #c9a86a;
+  --gt-cyan: #00ffff;
+  --gt-neon: #bc13fe;
+  --gt-text-muted: #94a3b8;
+}
+
+.gt-game-universe {
+  background-color: var(--gt-bg);
+  padding: 80px 0;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+.gt-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Hero Section --- */
+.gt-portfolio-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gt-portfolio-subtitle {
+  color: var(--gt-gold);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gt-portfolio-main-title {
+  font-family: "Bungee", cursive;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--gt-gold);
+}
+
+.gt-portfolio-main-title span {
+  color: var(--gt-cyan);
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.gt-gold-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--gt-gold);
+  margin: 15px auto;
+}
+
+/* --- Game Grid --- */
+.gt-game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.gt-game-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 106, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.gt-game-card:hover {
+  border-color: var(--gt-neon);
+  box-shadow: 0 10px 30px rgba(188, 19, 254, 0.2);
+}
+
+.gt-game-visual {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.gt-game-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.gt-game-card:hover .gt-game-visual img {
+  transform: scale(1.1);
+}
+
+/* Overlay & Buttons */
+.gt-game-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.gt-game-card:hover .gt-game-overlay {
+  opacity: 1;
+}
+
+.gt-action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 70%;
+}
+
+.gt-btn {
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.gt-view-btn {
+  background: var(--gt-cyan);
+  color: #000;
+}
+
+.gt-download-btn {
+  border: 2px solid var(--gt-neon);
+  color: var(--gt-neon);
+}
+
+.gt-download-btn:hover {
+  background: var(--gt-neon);
+  color: #fff;
+}
+
+/* Details Section */
+.gt-game-details {
+  padding: 20px;
+}
+
+.gt-game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.gt-game-header h3 {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.gt-rating {
+  color: #fbbf24;
+  font-weight: bold;
+}
+
+.gt-tech-stack {
+  margin-bottom: 15px;
+}
+
+.gt-tag {
+  font-size: 11px;
+  background: rgba(201, 168, 106, 0.1);
+  color: var(--gt-gold);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+  border: 1px solid rgba(201, 168, 106, 0.3);
+}
+
+.gt-game-details p {
+  color: var(--gt-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Modal CSS */
+.gt-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.gt-modal-blur-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.gt-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid var(--gt-cyan);
+}
+
+.video-container video {
+  width: 100%;
+  display: block;
+}
+
+.gt-close-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--gt-cyan);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 10;
+}

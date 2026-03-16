@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grow Tech | App Universe</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/portfolio-css/app-portfolio.css" />
+  </head>
+  <body>
+    <section class="gt-clean-app-universe">
+      <div class="gt-container">
+        <div class="gt-portfolio-hero">
+          <span class="gt-portfolio-subtitle">Mobile Excellence</span>
+          <h1 class="gt-portfolio-main-title">App <span>Universe</span></h1>
+          <div class="gt-gold-divider"></div>
+        </div>
+
+        <div class="gt-app-grid">
+          <div class="gt-app-card">
+            <div class="gt-card-visual">
+              <img src="/projects-images/travello.png" alt="E-Commerce App" />
+              <div class="gt-glass-overlay">
+                <div class="gt-action-group">
+                  <a
+                    href="javascript:void(0)"
+                    class="gt-btn gt-view-btn"
+                    onclick="openVideo('/videos/travello.mp4')"
+                    >View Live</a
+                  >
+                  <a
+                    href="/download-apps/travello.apk"
+                    class="gt-btn gt-download-btn"
+                    >Get App</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="gt-app-details">
+              <h3>
+                Simple UI Kit <span class="travello-highlight">Travello</span>
+              </h3>
+
+              <div class="gt-app-features">
+                <span class="gt-feature-label">Key Features:</span>
+                <ul>
+                  <li>Login / Registration Integrated</li>
+                  <li>Application handle multiple pages</li>
+                  <li>User can check user data in home page</li>
+                  <li>A simple demo traveling app</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="gt-app-card">
+            <div class="gt-card-visual">
+              <img src="/projects-images/chat-app.png" alt="Fitness App" />
+              <div class="gt-glass-overlay">
+                <div class="gt-action-group">
+                  <a
+                    href="javascript:void(0)"
+                    class="gt-btn gt-view-btn"
+                    onclick="openVideo('/videos/chat-app.mp4')"
+                    >View Live</a
+                  >
+                  <a
+                    href="/download-apps/chat-app.apk"
+                    class="gt-btn gt-download-btn"
+                    >Get App</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="gt-app-details">
+              <h3>Demo <span class="chat-highlight">Chat App</span></h3>
+
+              <div class="gt-app-features">
+                <span class="gt-feature-label">Key Features:</span>
+                <ul>
+                  <li>Login / Registration Integrated</li>
+                  <li>Multi pages heandling by app</li>
+                  <li>A demo chat logic intrigated</li>
+                  <li>Email-Password / Google Authentication</li>
+                  <li>Theme feture intrigated</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="gt-app-card">
+            <div class="gt-card-visual">
+              <img src="/projects-images/app-img2.jpeg" alt="Fitness App" />
+              <div class="gt-glass-overlay">
+                <div class="gt-action-group">
+                  <a
+                    href="javascript:void(0)"
+                    class="gt-btn gt-view-btn"
+                    onclick="openVideo('/videos/chat-app.mp4')"
+                    >View Live</a
+                  >
+                  <a
+                    href="/download-apps/fruzz-digi.apk"
+                    class="gt-btn gt-download-btn"
+                    >Get App</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="gt-app-details">
+              <h3>
+                Login / Register Screen
+                <span class="fruzz-highlight">Fruzz Digital</span>
+              </h3>
+
+              <div class="gt-app-features">
+                <span class="gt-feature-label">Key Features:</span>
+                <ul>
+                  <li>Login / Registration Integrated</li>
+                  <li>Email-Password / Google Authentication</li>
+                  <li>User data editable feture added</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="videoModal" class="gt-modal">
+      <div class="gt-modal-blur-bg" onclick="closeVideo()"></div>
+
+      <div class="gt-modal-content">
+        <button class="gt-close-x" onclick="closeVideo()">
+          <i class="bx bx-x"></i>
+        </button>
+
+        <div class="android-device">
+          <div class="android-punch-hole"></div>
+          <div class="android-screen">
+            <video id="appVideo" muted loop playsinline>
+              <source src="/videos/app-video1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/portfolio.js"></script>
+  </body>
+</html>

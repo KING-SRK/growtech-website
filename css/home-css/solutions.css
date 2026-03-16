@@ -20,7 +20,7 @@
     transparent 1px
   );
   background-size: 40px 40px;
-  padding: 80px 0;
+  padding: 80px 20px;
 }
 
 /* গ্রাফিক্স ২: কোণায় গোল্ডেন গ্লো */
@@ -66,6 +66,7 @@
 
 .section-header {
   margin-bottom: 60px;
+  text-align: center;
 }
 
 .section-header h2 {
@@ -73,7 +74,14 @@
   font-weight: 800;
   letter-spacing: -1px;
   margin: 10px 0;
-  color: #ffffff;
+  display: inline;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .header-line {
@@ -90,6 +98,7 @@
   letter-spacing: 3px;
   font-weight: 600;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 /* ফিচার গ্রিড */
@@ -97,8 +106,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   padding: 0 20px;
 }
 
@@ -136,7 +144,6 @@
 }
 
 .feature-box:hover {
-  transform: translateY(-15px);
   background: rgba(255, 255, 255, 0.06);
   border-color: var(--accent-gold);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
@@ -173,8 +180,14 @@
 .feature-box h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #ffffff;
   font-weight: 700;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .feature-box p {
@@ -191,27 +204,69 @@
 }
 
 .premium-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 12px;
   padding: 16px 45px;
-  background: transparent;
-  border: 2px solid var(--accent-gold);
-  color: var(--accent-gold);
-  text-decoration: none;
-  font-weight: 700;
+  border: 2px solid #c9a86a;
   border-radius: 50px;
-  transition: 0.4s all;
+  background: transparent;
+  color: #c9a86a;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+
+  /* এনিমেশন টাইমিং - এটাকে 0.6s করলাম আরও লাক্সারি ফিলের জন্য */
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+  /* গ্লিচ আটকানোর ব্রহ্মাস্ত্র */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.premium-btn span,
+.premium-btn i {
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s ease;
+}
+
+/* এই ::before টাই আসল ম্যাজিক করবে */
+.premium-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%; /* সামান্য বেশি চওড়া */
+  height: 100%;
+  background: #c9a86a;
+  z-index: -1;
+
+  /* শুরুতে এটা বাঁ দিকে পুরোপুরি লুকিয়ে থাকবে এবং ত্যাড়ছা হয়ে থাকবে */
+  transform: translateX(-110%) skewX(-20deg);
+
+  /* ট্রানজিশনটা বাটনের বডির চেয়ে সামান্য ফাস্ট রাখলে স্মুথ লাগে */
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-origin: left;
 }
 
 .premium-btn:hover {
-  background: var(--gold-gradient);
-  color: var(--dark-blue);
-  box-shadow: 0 15px 30px rgba(201, 168, 106, 0.4);
-  transform: scale(1.05) translateY(-3px);
+  color: #0a1128; /* টেক্সট কালার ডার্ক হবে */
+  box-shadow: 0 12px 24px rgba(201, 168, 106, 0.3);
+}
+
+.premium-btn:hover::before {
+  /* হোভার করলে স্লাইডারটা আসবে এবং skew টা ০ হয়ে যাবে */
+  transform: translateX(0) skewX(0deg);
+}
+
+/* আইকন এনিমেশন (যদি থাকে) */
+.premium-btn:hover i {
+  transform: translateX(5px);
+  transition: transform 0.4s ease;
 }
 
 /* =========================

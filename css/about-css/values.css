@@ -1,0 +1,182 @@
+.values-section {
+  padding: 100px 20px;
+  background-color: #0d102a;
+}
+
+.values-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.gold-badge {
+  color: #c9a86a;
+  border: 1px solid rgba(201, 168, 106, 0.4);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gradient-title {
+  font-family: "Bungee", cursive;
+  font-size: 3rem;
+  margin-top: 20px;
+  background: linear-gradient(to bottom, #ffffff, #9ca3af);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.values-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-item {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  padding: 50px 40px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.value-item:hover {
+  transform: translateY(-15px) scale(1.02);
+  border-color: rgba(201, 168, 106, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.value-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(201, 168, 106, 0.1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.value-icon i {
+  font-size: 32px;
+  color: #c9a86a; /* Gold Icon */
+}
+
+.value-item h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.value-item p {
+  color: #9ca3af;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Corner Glow Accents */
+.corner-cyan,
+.corner-gold {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  filter: blur(50px);
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.corner-cyan {
+  bottom: -50px;
+  right: -50px;
+  background: #00ffff;
+}
+.corner-gold {
+  bottom: -50px;
+  right: -50px;
+  background: #c9a86a;
+}
+
+.value-item:hover .corner-cyan,
+.value-item:hover .corner-gold {
+  opacity: 0.2;
+}
+
+/* Responsive Styles for Values Section */
+
+@media (max-width: 1024px) {
+  .gradient-title {
+    font-size: 2.5rem; /* ট্যাবলেটের জন্য টাইটেল একটু ছোট করলাম */
+  }
+
+  .values-wrapper {
+    gap: 30px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .values-section {
+    padding: 50px 20px;
+  }
+
+  .gradient-title {
+    font-size: 2rem;
+  }
+
+  .values-wrapper {
+    /* মোবাইলে কার্ডগুলো একটার নিচে একটা আসবে */
+    grid-template-columns: 1fr;
+  }
+
+  .value-item {
+    padding: 40px 30px; /* মোবাইল স্ক্রিনের জন্য প্যাডিং কমানো হলো */
+  }
+
+  .value-item:hover {
+    /* মোবাইলে হোভার স্কেল একটু কমানো ভালো যাতে স্ক্রিনের বাইরে না যায় */
+    transform: translateY(-10px) scale(1.01);
+  }
+
+  .values-wrapper {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .gradient-title {
+    font-size: 1.6rem;
+  }
+
+  .values-header {
+    margin-bottom: 30px;
+  }
+
+  .value-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .value-item p {
+    font-size: 0.9rem;
+  }
+
+  .value-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .value-icon i {
+    font-size: 26px;
+  }
+}

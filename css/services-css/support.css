@@ -1,0 +1,205 @@
+.support-continuity {
+  padding: 120px 20px;
+  background-color: #0d102a;
+  color: #fff;
+  overflow: hidden;
+}
+
+.support-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.support-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.feature-list {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+}
+
+.f-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+}
+
+.f-item i {
+  color: #00ffff;
+  font-size: 24px;
+}
+
+/* Visual Side - Glass Cards */
+.support-visual {
+  flex: 1;
+  position: relative;
+  min-width: 350px;
+  height: 450px;
+}
+
+.glass-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.glass-card-item {
+  position: absolute;
+  width: 280px;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 106, 0.2);
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease;
+}
+
+.glass-card-item i {
+  font-size: 40px;
+  color: #c9a86a;
+  margin-bottom: 20px;
+}
+
+.glass-card-item h4 {
+  font-family: "Bungee", cursive;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #00ffff;
+}
+
+.glass-card-item p {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+/* Overlapping Positions */
+.card-top {
+  top: 0;
+  right: 10%;
+  z-index: 2;
+}
+
+.card-bottom {
+  bottom: 50px;
+  left: 0;
+  z-index: 1;
+  border-color: rgba(0, 255, 255, 0.2);
+}
+
+/* Hover Animation */
+.support-visual:hover .card-top {
+  transform: translateY(-20px) rotate(-5deg);
+  border-color: #c9a86a;
+}
+
+.support-visual:hover .card-bottom {
+  transform: translateY(20px) rotate(5deg);
+  border-color: #00ffff;
+}
+
+/* Responsive Styles for Support Continuity Section */
+
+@media (max-width: 1024px) {
+  .support-wrapper {
+    gap: 50px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .f-item {
+    justify-content: center; /* ট্যাবলেট ও মোবাইলে ফিচারগুলো সেন্টারে থাকবে */
+  }
+
+  .support-visual {
+    height: 400px;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-top {
+    right: 5%; /* একটু ডিসট্যান্স কমিয়ে আনা হলো */
+  }
+}
+
+@media (max-width: 768px) {
+  .support-continuity {
+    padding: 80px 20px;
+  }
+
+  .bold-title {
+    font-size: 2.2rem;
+  }
+
+  /* মোবাইলে কার্ডগুলো বেশি বাঁকা না করে সোজাসুজি রাখা ভালো */
+  .glass-card-item {
+    width: 260px;
+    padding: 30px 20px;
+  }
+
+  .card-top {
+    top: 20px;
+    right: 0;
+  }
+
+  .card-bottom {
+    bottom: 20px;
+    left: 0;
+  }
+
+  /* হোভার এনিমেশন মোবাইলের জন্য একটু স্মুথ করা হলো */
+  .support-visual:hover .card-top {
+    transform: translateY(-10px);
+  }
+
+  .support-visual:hover .card-bottom {
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .bold-title {
+    font-size: 1.5rem;
+  }
+
+  .support-text p {
+    font-size: 0.9rem;
+  }
+
+  .f-item {
+    font-size: 0.95rem;
+  }
+
+  /* খুব ছোট ফোনে কার্ডগুলো একটার নিচে একটা আসবে যাতে ভিড় না হয় */
+  .support-visual {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .glass-card-item {
+    position: relative; /* স্ট্যাক থেকে বের করে আনা হলো */
+    width: 100%;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+
+  .support-visual:hover .card-top,
+  .support-visual:hover .card-bottom {
+    transform: scale(1.02); /* মোবাইলে জাস্ট সামান্য বড় হবে */
+  }
+}

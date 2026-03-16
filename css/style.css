@@ -14,8 +14,7 @@
 }
 
 body {
-  background-color: #f9f9f9;
-  color: #333;
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -27,9 +26,8 @@ main {
 
 .premium-divider {
   width: 100%;
-  height: 4px;
+  height: 1px;
   background: linear-gradient(90deg, #ffd700, #ff8c00, #ffd700);
-  border-radius: 2px;
   background-size: 200% 100%;
   animation: premiumLineAnim 3s linear infinite;
 }

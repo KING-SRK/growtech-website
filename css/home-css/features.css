@@ -1,0 +1,238 @@
+/* --- Features Section Main Styles --- */
+.features-section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #0a1128;
+  padding: 80px 0;
+}
+
+.features-container {
+  height: auto;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* --- Left and Right Layout --- */
+.features-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.features-right {
+  width: 50%;
+  display: flex;
+}
+
+/* --- Feature Boxes --- */
+.features-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.features-box-text {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-shortcut {
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.features-box-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  display: inline;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.features-box-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+}
+
+/* --- Tag Grid Update --- */
+.features-tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.tag:hover {
+  background: rgba(0, 255, 255, 0.08);
+  border-color: #00ffff;
+}
+
+.tag span {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+/* --- Icon Scroller Update (More Subtle Background) --- */
+.icon-scroller {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 20px;
+  white-space: nowrap;
+}
+
+.icon-track,
+.icon-track-reverse {
+  display: flex;
+  width: max-content;
+}
+
+.icon-track {
+  animation: scroll 25s linear infinite;
+}
+.icon-track-reverse {
+  animation: scroll-reverse 25s linear infinite;
+}
+
+.icon-card {
+  background: rgba(255, 255, 255, 0.05); /* হালকা এবং চোখে লাগবে না */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scroll-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* --- Feature Image Update (Full View) --- */
+.featurs-img {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featurs-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* ছবি পুরোটা দেখানোর জন্য */
+  border-radius: 15px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+}
+
+/* --- Responsive Styles --- */
+
+@media (max-width: 1024px) {
+  .features-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .features-left,
+  .features-right {
+    width: 100%;
+  }
+  .features-right {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 60px 0;
+  }
+
+  .features-box-text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .featurs-img {
+    padding: 20px;
+    height: 350px;
+  }
+
+  .icon-card {
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-box-text h3 {
+    font-size: 1.5rem;
+  }
+  .features-box-text p {
+    font-size: 0.95rem;
+  }
+  .features-tags {
+    grid-template-columns: 1fr;
+  }
+  .features-right {
+    min-height: 300px;
+  }
+  .featurs-img {
+    height: auto;
+  }
+}

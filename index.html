@@ -34,7 +34,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -52,10 +60,14 @@
       }
     </script>
 
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/home-css/hero.css" />
     <link rel="stylesheet" href="css/home-css/solutions.css" />
     <link rel="stylesheet" href="css/home-css/details.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home-css/features.css" />
+    <link rel="stylesheet" href="css/home-css/integration.css" />
+    <link rel="stylesheet" href="css/home-css/app-grid.css" />
+    <link rel="stylesheet" href="css/home-css/faq.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,81 +86,21 @@
 
     <main>
       <section class="hero-section">
-        <video autoplay muted loop id="hero-video">
-          <source src="videos/luxery1.mp4" type="video/mp4" />
-        </video>
-
-        <div class="container">
-          <div class="hero-title">
-            <h1>
-              Scale Your Business to New Heights with <span>Grow Tech</span>
-            </h1>
-            <p class="subtitle">We provide <span class="typing-text"></span></p>
-          </div>
-
-          <div class="swiper-outer-container">
-            <div class="swiper hero-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card dark-card featured-card">
-                    <div class="card-icon-bg">
-                      <i class="bx bx-globe"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>
-                      We build high-performance, SEO-friendly websites using
-                      modern stacks like MERN. From custom business sites to
-                      complex platforms, we ensure your digital presence is
-                      fast, scalable, and built with the latest technical
-                      standards to grow your business online.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="card dark-card featured-card">
-                    <div class="card-icon-bg">
-                      <i class="bx bx-mobile-alt"></i>
-                    </div>
-                    <h3>App Development</h3>
-                    <p>
-                      Creating intuitive mobile and desktop applications
-                      designed for seamless user experiences. Whether it's
-                      Android or iOS, we turn your innovative ideas into
-                      high-quality apps, focusing on smooth navigation, robust
-                      performance, and modern UI/UX design.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="card dark-card featured-card">
-                    <div class="card-icon-bg">
-                      <i class="bx bx-joystick"></i>
-                    </div>
-                    <h3>Game Development</h3>
-                    <p>
-                      Immerse your audience with engaging 2D/3D games. Our team
-                      specializes in stunning graphics, smooth mechanics, and
-                      unforgettable storytelling for all major platforms,
-                      ensuring a thrilling and interactive experience for every
-                      player.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-button-next">
-                <i class="bx bx-chevron-right"></i>
-              </div>
-
-              <div class="swiper-button-prev">
-                <i class="bx bx-chevron-left"></i>
-              </div>
-
-              <div class="swiper-pagination"></div>
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1>Where the world builds <span>Grow Tech</span></h1>
+            <p>
+              Our landing page template works on all devices, so you only have
+              to set it up once, and get beautiful results forever.
+            </p>
+            <div class="hero-btns">
+              <a href="#" class="hero-btn">
+                <span class="btn-top">Get Started</span>
+              </a>
+              <a href="#" class="hero-btn-secondary">View Services</a>
             </div>
           </div>
+          <div class="hero-image"></div>
         </div>
       </section>
 
@@ -211,7 +163,7 @@
           </div>
 
           <div class="cta-wrapper">
-            <a href="html/services.html" class="premium-btn">
+            <a href="#" class="premium-btn">
               <span>Explore All Services</span>
               <i class="bx bx-right-arrow-alt"></i>
             </a>
@@ -234,7 +186,7 @@
               <div class="image-glow"></div>
             </div>
             <div class="detail-content">
-              <p class="detail-subtitle">01. Digital Identity</p>
+              <h5 class="detail-subtitle">01. Digital Identity</h5>
               <h2>Modern Web Development</h2>
               <p>
                 Elevate your brand with high-performance, SEO-optimized, and
@@ -257,7 +209,7 @@
               <div class="image-glow blue"></div>
             </div>
             <div class="detail-content">
-              <p class="detail-subtitle">02. Mobility</p>
+              <h5 class="detail-subtitle">01. Digital Identity</h5>
               <h2>Custom Mobile Apps</h2>
               <p>
                 Led by Aman Shaw, our app team builds intuitive Android and iOS
@@ -279,7 +231,7 @@
               <div class="image-glow purple"></div>
             </div>
             <div class="detail-content">
-              <p class="detail-subtitle">03. Entertainment</p>
+              <h5 class="detail-subtitle">01. Digital Identity</h5>
               <h2>Immersive Game Development</h2>
               <p>
                 Bijoy Thayal leads our gaming division, creating high-quality 2D
@@ -298,7 +250,7 @@
               <div class="image-glow gold"></div>
             </div>
             <div class="detail-content">
-              <p class="detail-subtitle">04. Reliability</p>
+              <h5 class="detail-subtitle">01. Digital Identity</h5>
               <h2>Expert Tech Support</h2>
               <p>
                 Our Head of Support, Biprajit Paul, ensures your digital
@@ -309,6 +261,334 @@
               <a href="#" class="detail-btn"
                 >Get Support <i class="bx bx-chevron-right"></i
               ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="premium-divider">
+        <span></span>
+      </div>
+
+      <section class="features-section">
+        <div class="section-header">
+          <p class="subtitle">Our Solutions</p>
+          <h2>GrowTech's Specialized Services</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="features-container">
+          <div class="features-left">
+            <div class="features-box">
+              <div class="features-box-text">
+                <h3>List your applications</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer maximus nulla ante, quis commodo.
+                </p>
+              </div>
+
+              <div class="icon-scroller">
+                <div class="icon-track">
+                  <div class="icon-card"><i class="fas fa-cloud"></i></div>
+                  <div class="icon-card"><i class="fas fa-home"></i></div>
+                  <div class="icon-card"><i class="fas fa-box"></i></div>
+                  <div class="icon-card"><i class="fas fa-leaf"></i></div>
+                  <div class="icon-card"><i class="fas fa-image"></i></div>
+                  <div class="icon-card"><i class="fas fa-fire"></i></div>
+                  <div class="icon-card"><i class="fas fa-pen-nib"></i></div>
+                  <div class="icon-card"><i class="fas fa-bolt"></i></div>
+
+                  <div class="icon-card"><i class="fas fa-cloud"></i></div>
+                  <div class="icon-card"><i class="fas fa-home"></i></div>
+                  <div class="icon-card"><i class="fas fa-box"></i></div>
+                  <div class="icon-card"><i class="fas fa-leaf"></i></div>
+                  <div class="icon-card"><i class="fas fa-image"></i></div>
+                  <div class="icon-card"><i class="fas fa-fire"></i></div>
+                  <div class="icon-card"><i class="fas fa-pen-nib"></i></div>
+                  <div class="icon-card"><i class="fas fa-bolt"></i></div>
+                </div>
+              </div>
+
+              <div class="icon-scroller">
+                <div class="icon-track-reverse">
+                  <div class="icon-card"><i class="fas fa-cloud"></i></div>
+                  <div class="icon-card"><i class="fas fa-home"></i></div>
+                  <div class="icon-card"><i class="fas fa-box"></i></div>
+                  <div class="icon-card"><i class="fas fa-leaf"></i></div>
+                  <div class="icon-card"><i class="fas fa-image"></i></div>
+                  <div class="icon-card"><i class="fas fa-fire"></i></div>
+                  <div class="icon-card"><i class="fas fa-pen-nib"></i></div>
+                  <div class="icon-card"><i class="fas fa-bolt"></i></div>
+
+                  <div class="icon-card"><i class="fas fa-cloud"></i></div>
+                  <div class="icon-card"><i class="fas fa-home"></i></div>
+                  <div class="icon-card"><i class="fas fa-box"></i></div>
+                  <div class="icon-card"><i class="fas fa-leaf"></i></div>
+                  <div class="icon-card"><i class="fas fa-image"></i></div>
+                  <div class="icon-card"><i class="fas fa-fire"></i></div>
+                  <div class="icon-card"><i class="fas fa-pen-nib"></i></div>
+                  <div class="icon-card"><i class="fas fa-bolt"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="features-box">
+              <div class="features-box-text">
+                <h3>Grow your business</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer maximus nulla ante, quis commodo.
+                </p>
+
+                <div class="features-tags">
+                  <div class="tag"><span>Web</span></div>
+                  <div class="tag"><span>App</span></div>
+                  <div class="tag"><span>Game</span></div>
+                  <div class="tag"><span>Report</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="features-right">
+            <div class="features-box">
+              <div class="features-box-text">
+                <div class="features-shortcut">⌘ + S</div>
+                <h3>List your features</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer maximus nulla ante, quis commodo.
+                </p>
+              </div>
+
+              <div class="featurs-img">
+                <img
+                  src="images/website-development.png"
+                  alt="Web Development GrowTech"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="integration-section">
+        <div class="integration-container">
+          <div class="pill-wrapper">
+            <div class="icon-pill-bar">
+              <div class="pill-icon"><i class="bx bx-atom"></i></div>
+              <div class="pill-icon"><i class="bx bx-planet"></i></div>
+              <div class="pill-icon"><i class="bx bx-smile"></i></div>
+              <div class="pill-icon main-logo">
+                <div class="logo-glow"></div>
+                <i class="bx bxl-framer"></i>
+              </div>
+              <div class="pill-icon"><i class="bx bx-shape-polygon"></i></div>
+              <div class="pill-icon"><i class="bx bx-chip"></i></div>
+              <div class="pill-icon"><i class="bx bx-world"></i></div>
+            </div>
+          </div>
+
+          <div class="integration-content">
+            <span class="badge">Seamless Ecosystem</span>
+            <h2 class="premium-heading">
+              Discover all-in-one system <br />
+              <span>integrated products.</span>
+            </h2>
+            <p>
+              Grow Tech turns your complex ideas into simple, powerful, and
+              integrated digital solutions designed for your vision.
+            </p>
+
+            <a href="#" class="premium-btn">
+              <span>Contact Sales</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="apps-grid-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="subtitle">Our Integrations</p>
+            <h2>View our connected applications</h2>
+            <div class="header-line"></div>
+          </div>
+
+          <div class="apps-grid">
+            <div class="app-card">
+              <div class="app-icon-box">
+                <i class="bx bxl-slack"></i>
+              </div>
+              <h3>Slack</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo.
+              </p>
+            </div>
+
+            <div class="app-card">
+              <div class="app-icon-box">
+                <i class="bx bxl-shopify"></i>
+              </div>
+              <h3>Shopify</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo.
+              </p>
+            </div>
+
+            <div class="app-card">
+              <div class="app-icon-box">
+                <i class="bx bx-transfer-alt"></i>
+              </div>
+              <h3>Zapier</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo.
+              </p>
+            </div>
+
+            <div class="app-card">
+              <div class="app-icon-box">
+                <i class="bx bxl-discord-alt"></i>
+              </div>
+              <h3>Discord</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo.
+              </p>
+            </div>
+
+            <div class="app-card">
+              <div class="app-icon-box">
+                <i class="bx bxl-amazon"></i>
+              </div>
+              <h3>Amazon</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo.
+              </p>
+            </div>
+
+            <div class="app-card">
+              <div class="app-icon-box">
+                <i class="bx bxl-twitter"></i>
+              </div>
+              <h3>Twitter</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo.
+              </p>
+            </div>
+
+            <div class="app-card">
+              <div class="app-icon-box">
+                <i class="bx bxl-facebook"></i>
+              </div>
+              <h3>Facebook</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo.
+              </p>
+            </div>
+
+            <div class="app-card">
+              <div class="app-icon-box">
+                <i class="bx bxl-instagram"></i>
+              </div>
+              <h3>Instagram</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <div class="faq-container">
+          <div class="faq-grid">
+            <div class="faq-sidebar">
+              <div class="badge">FAQ's</div>
+              <h2 class="faq-title">Frequently Asked<br />Questions.</h2>
+              <p class="faq-desc">
+                Have a different question and can't find the answer you're
+                looking for? Reach out to our support team.
+              </p>
+              <a href="#" class="faq-cta"
+                >Contact Support <i class="bx bx-right-arrow-alt"></i
+              ></a>
+            </div>
+
+            <div class="faq-accordion">
+              <div class="faq-card">
+                <button class="faq-trigger">
+                  <span>What services does Grow Tech provide?</span>
+                  <div class="plus-icon"></div>
+                </button>
+                <div class="faq-content">
+                  <div class="faq-inner">
+                    <p>
+                      We specialize in full-stack web development, custom mobile
+                      applications, and immersive game development. Our team
+                      handles everything from UI/UX design to final deployment
+                      and maintenance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-card">
+                <button class="faq-trigger">
+                  <span>How long does a typical project take?</span>
+                  <div class="plus-icon"></div>
+                </button>
+                <div class="faq-content">
+                  <div class="faq-inner">
+                    <p>
+                      Timeline varies based on complexity. A professional
+                      website typically takes 2-4 weeks, while complex apps or
+                      games can take 2-4 months. We provide a detailed roadmap
+                      after our initial strategy meeting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-card">
+                <button class="faq-trigger">
+                  <span>Do you offer post-launch support?</span>
+                  <div class="plus-icon"></div>
+                </button>
+                <div class="faq-content">
+                  <div class="faq-inner">
+                    <p>
+                      Absolutely! Under Biprajit Paul's leadership, we provide
+                      24/7 technical monitoring, security updates, and regular
+                      maintenance to ensure your digital product stays ahead of
+                      the curve.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-card">
+                <button class="faq-trigger">
+                  <span>What are your pricing plans?</span>
+                  <div class="plus-icon"></div>
+                </button>
+                <div class="faq-content">
+                  <div class="faq-inner">
+                    <p>
+                      We offer flexible pricing options based on project scope
+                      and complexity. Contact us to learn more about our pricing
+                      structure.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

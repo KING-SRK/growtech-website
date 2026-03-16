@@ -1,0 +1,388 @@
+/* =========================================
+   GROW TECH PORTFOLIO - UPDATED CSS
+   ========================================= */
+
+:root {
+  --gt-bg: #0d102a;
+  --gt-gold: #c9a86a;
+  --gt-cyan: #00ffff;
+  --gt-muted: #8892b0;
+  --gt-glass: rgba(255, 255, 255, 0.03);
+  --gt-border: rgba(201, 168, 106, 0.15);
+}
+
+.gt-clean-app-universe {
+  background-color: var(--gt-bg);
+  padding: 50px 0;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.gt-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Hero Section --- */
+.gt-portfolio-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.gt-portfolio-main-title {
+  color: var(--gt-gold);
+  font-family: "Bungee", cursive;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin: 15px 0;
+}
+
+.gt-portfolio-main-title span {
+  color: var(--gt-cyan);
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.gt-portfolio-subtitle {
+  color: var(--gt-gold);
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.gt-gold-divider {
+  width: 80px;
+  height: 4px;
+  background: var(--gt-gold);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* --- App Grid --- */
+.gt-app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+/* --- The Clean Card --- */
+.gt-app-card {
+  background: var(--gt-glass);
+  border: 1px solid var(--gt-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.gt-app-card:hover {
+  border-color: var(--gt-cyan);
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.05);
+}
+
+.gt-card-visual {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #1a223f;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.gt-card-visual img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 3s ease-in-out;
+}
+
+/* Glass Overlay & Buttons */
+.gt-glass-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 16, 42, 0.9);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+}
+
+.gt-app-card:hover .gt-glass-overlay {
+  opacity: 1;
+}
+
+.gt-action-group {
+  display: flex;
+  gap: 15px;
+  width: 90%;
+  justify-content: center;
+}
+
+.gt-btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: 0.3s;
+  text-align: center;
+  width: 45%;
+}
+
+.gt-view-btn {
+  background: var(--gt-cyan);
+  color: #000;
+}
+
+.gt-view-btn:hover {
+  box-shadow: 0 0 15px var(--gt-cyan);
+}
+
+.gt-download-btn {
+  background: transparent;
+  border: 2px solid var(--gt-gold);
+  color: var(--gt-gold);
+}
+
+.gt-download-btn:hover {
+  background: var(--gt-gold);
+  color: #000;
+}
+
+/* --- Tech Tags --- */
+.gt-tech-stack {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gt-tag-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gt-muted);
+  font-weight: 700;
+}
+
+.gt-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gt-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 168, 106, 0.3);
+  color: var(--gt-gold);
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.gt-tag:hover {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: var(--gt-cyan);
+  color: var(--gt-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.15);
+}
+
+/* --- App Features (Updated with Premium Dots) --- */
+.gt-app-features {
+  margin: 15px 0;
+  padding: 10px 0;
+}
+
+.gt-feature-label {
+  font-size: 11px;
+  color: var(--gt-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.gt-app-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gt-app-features li {
+  color: var(--gt-muted);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px; /* ডট ও টেক্সটের গ্যাপ */
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* ডট তৈরির সিএসএস */
+.gt-app-features li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: var(--gt-gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(201, 168, 106, 0.4);
+}
+
+/* কার্ড হোভার করলে ডট সায়ান হয়ে যাবে */
+.gt-app-card:hover .gt-app-features li::before {
+  background-color: var(--gt-cyan);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  transform: scale(1.3);
+}
+
+.gt-app-card:hover .gt-app-features li {
+  color: #fff;
+}
+
+/* --- Details & Info --- */
+.gt-app-details {
+  padding: 25px;
+}
+
+.gt-app-details h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.travello-highlight {
+  color: #ff3952;
+}
+.chat-highlight {
+  color: #48cc62;
+}
+.fruzz-highlight {
+  color: #00ccc5;
+}
+
+/* --- Modal & Android Device --- */
+.gt-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.gt-modal-blur-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.gt-modal-content {
+  position: relative;
+  z-index: 10000;
+  animation: popUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gt-close-x {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  background: none;
+  border: none;
+  color: var(--gt-cyan);
+  font-size: 45px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gt-close-x:hover {
+  transform: rotate(90deg);
+  color: #fff;
+}
+
+.android-device {
+  width: 280px;
+  height: 580px;
+  background: #000;
+  border: 10px solid #1e2235;
+  border-radius: 35px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+}
+
+.android-punch-hole {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #222;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.android-screen,
+.android-screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .gt-app-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .gt-app-grid {
+    grid-template-columns: 1fr;
+  }
+  .gt-action-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .gt-btn {
+    width: 100%;
+  }
+  .android-device {
+    width: 240px;
+    height: 500px;
+  }
+  .gt-close-x {
+    right: 0;
+    top: -60px;
+  }
+}

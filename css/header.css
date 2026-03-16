@@ -35,6 +35,11 @@
   height: 42px;
   width: auto;
   filter: drop-shadow(0 0 8px var(--primary-cyan));
+  transition: all 0.4s ease;
+}
+
+.logo-img:hover {
+  rotate: 360deg;
 }
 
 .logo-text {

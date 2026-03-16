@@ -1,0 +1,125 @@
+.apps-grid-section {
+  padding: 80px 0;
+  background-color: #0a1128; /* তোমার হিরো সেকশনের কালার */
+  text-align: center;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.app-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: left;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: #00ffff; /* তোমার থিমের সায়ান কালার */
+  transform: translateY(-10px);
+}
+
+.app-icon-box {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.app-icon-box i {
+  font-size: 28px;
+  color: #00ffff; /* আইকন কালার */
+}
+
+.app-card h3 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.app-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* কার্ডের পেছনে হালকা গ্লো ইফেক্ট (ঐচ্ছিক) */
+.app-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 255, 255, 0.05),
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* Responsive Styles for Apps Grid Section */
+
+@media (max-width: 1024px) {
+  .apps-grid {
+    /* ট্যাবলেটে ৩টি কলাম রাখার চেষ্টা করবে, জায়গা কম হলে ২টি করে দেবে */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .apps-grid-section {
+    padding: 60px 0;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+    padding: 0 15px;
+  }
+
+  .apps-grid {
+    /* মোবাইলে ১টি করে কার্ড দেখাবে */
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .app-card {
+    padding: 30px 25px; /* প্যাডিং কিছুটা কমালাম */
+  }
+
+  /* মোবাইলে হোভার এফেক্ট টাচ করার সময় যেন খুব বেশি লাফিয়ে না ওঠে */
+  .app-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .app-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .app-card p {
+    font-size: 14px;
+  }
+}

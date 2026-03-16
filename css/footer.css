@@ -86,13 +86,14 @@
   text-decoration: none;
   color: #fff;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  
+  /* কাঁপুনি বন্ধ করার জন্য transition এবং will-change ব্যবহার */
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s ease;
+  will-change: transform; 
   z-index: 1;
-
-  border: none !important;
+  border: none;
   outline: none;
-
-  box-shadow: 0 4px 15px #00ffff5e;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
 }
 
 /* ১. রিয়েল ব্র্যান্ডেড ব্যাকগ্রাউন্ড (শুরুতেই থাকবে) */

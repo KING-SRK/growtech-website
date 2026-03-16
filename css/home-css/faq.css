@@ -1,0 +1,244 @@
+/* --- FAQ Section Main Styles --- */
+.faq-section {
+  padding: 120px 0;
+  background-color: #0a1128;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.faq-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* --- Sidebar Styles --- */
+.faq-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  width: fit-content;
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  color: #00ffff;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.faq-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(to bottom, #ffffff 20%, #9ca3af 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  margin-bottom: 20px;
+}
+
+.faq-desc {
+  color: #9ca3af;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.faq-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: gap 0.3s ease;
+}
+
+.faq-cta:hover {
+  gap: 12px;
+}
+
+/* --- Accordion Styles --- */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  transition: all 0.4s ease;
+}
+
+.faq-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.faq-trigger {
+  width: 100%;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-trigger span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #f3f4f6;
+  padding-right: 20px;
+}
+
+/* --- Updated Plus Icon (No Clipping) --- */
+.plus-icon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  flex-shrink: 0; /* আইকন যেন ছোট না হয়ে যায় */
+}
+
+.plus-icon::before,
+.plus-icon::after {
+  content: "";
+  position: absolute;
+  background: #00ffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+/* Horizontal line */
+.plus-icon::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* Vertical line */
+.plus-icon::after {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* Animation for Active State */
+.faq-card.active .plus-icon::after {
+  transform: translateX(-50%) rotate(90deg);
+  opacity: 0;
+}
+
+.faq-card.active .plus-icon::before {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* --- Content Styles --- */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-inner {
+  padding: 0 32px 24px 32px;
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+.faq-card.active {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.faq-card.active .faq-content {
+  max-height: 500px; /* উত্তর বড় হলেও যেন জায়গা পায় */
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 1200px) {
+  .faq-container {
+    padding: 0 40px;
+  }
+  .faq-grid {
+    gap: 40px;
+  }
+  .faq-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .faq-sidebar {
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .faq-title {
+    font-size: 42px;
+  }
+  .faq-desc {
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 80px 0;
+  }
+  .faq-container {
+    padding: 0 20px;
+  }
+  .faq-title {
+    font-size: 32px;
+  }
+  .faq-trigger {
+    padding: 20px;
+  }
+  .faq-trigger span {
+    font-size: 17px;
+  }
+  .faq-inner {
+    padding: 0 20px 20px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-title {
+    font-size: 28px;
+  }
+  .faq-desc {
+    font-size: 15px;
+  }
+  .faq-trigger span {
+    font-size: 16px;
+  }
+}
