@@ -1,0 +1,102 @@
+/* Tech Stack Section Styling */
+.gt-tech-stack {
+  padding: 80px 0;
+  background: #0d102a; /* ডার্ক থিম তোমাদের গোল্ডেন থিমের সাথে ভালো ফুটবে */
+  color: #fff;
+}
+
+.center-align {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.center-align .gt-gold-divider {
+  margin: 15px auto;
+}
+
+.gt-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.gt-stack-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.1); /* হালকা গোল্ডেন বর্ডার */
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.gt-stack-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #c9a86a; /* হোভার করলে গোল্ডেন বর্ডার উজ্জ্বল হবে */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.stack-icon {
+  font-size: 50px;
+  color: #c9a86a;
+  margin-bottom: 20px;
+}
+
+.gt-stack-card h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+
+  font-weight: 800;
+  display: inline;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.gt-stack-card p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.stack-badge {
+  display: inline-block;
+  padding: 5px 15px;
+  background: #c9a86a;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-family: "Inter", sans-serif;
+}
+
+/* একটা প্রিমিয়াম হোভার ইফেক্ট */
+.gt-stack-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.gt-stack-card:hover::before {
+  opacity: 1;
+}

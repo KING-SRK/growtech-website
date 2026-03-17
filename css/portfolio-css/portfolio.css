@@ -147,9 +147,18 @@
 .gt-card-body h3 {
   font-family: "Inter", sans-serif;
   font-size: 1.7rem;
-  font-weight: 700;
-  color: #ffffff;
   margin-bottom: 8px;
+
+  font-weight: 800;
+  letter-spacing: -1px;
+  display: inline;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .gt-lead {

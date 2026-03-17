@@ -114,6 +114,7 @@
   color: #fff;
   font-family: inherit;
   transition: var(--contact-speed);
+  resize: none;
 }
 
 .contact-field input:focus,
@@ -159,9 +160,18 @@
 }
 
 .contact-info-card h3 {
-  font-family: "Bungee", cursive;
+  font-family: "Inter", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 30px;
+  font-weight: 800;
+  display: inline;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .contact-detail-item {
@@ -202,9 +212,17 @@
 }
 
 .contact-cta-card h2 {
-  font-family: "Bungee", cursive;
   font-size: 2rem;
   margin-bottom: 15px;
+  font-weight: 800;
+  display: inline;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .contact-secondary-btn {

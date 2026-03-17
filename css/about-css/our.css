@@ -92,11 +92,19 @@
 }
 
 .trio-card h3 {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+
   font-family: "Inter", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 5px;
-  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -1px;
+  display: inline;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .trio-card .role {

@@ -1,0 +1,132 @@
+/* Neural Stats Section Main Styling */
+.gt-neural-stats {
+  padding: 120px 0;
+  background: #0d102a;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Glowing Accents */
+.bg-glow-1,
+.bg-glow-2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(201, 168, 106, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+.bg-glow-1 {
+  top: -100px;
+  left: -100px;
+}
+.bg-glow-2 {
+  bottom: -100px;
+  right: -100px;
+}
+
+.gt-neural-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  padding: 50px 30px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(201, 168, 106, 0.4);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Perfect SVG Progress Ring Styling */
+.neural-circle {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.neural-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.bg-circle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 10;
+}
+
+.progress-ring {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 10;
+  stroke-linecap: round;
+  /* Circumference for r=85 is approx 534 */
+  stroke-dasharray: 534;
+  stroke-dashoffset: 534;
+  filter: drop-shadow(0 0 10px #00ffff);
+  transition: stroke-dashoffset 2.5s ease-in-out;
+}
+
+.gt-neural-stats.active .progress-ring {
+  stroke-dashoffset: calc(534 - (534 * var(--percent)) / 100);
+}
+
+.neural-info {
+  position: absolute;
+  transform: rotate(0deg);
+}
+
+.stat-number {
+  font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+  color: #c9a86a;
+  margin: 0;
+}
+
+.neural-card h4 {
+  color: #c9a86a;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+.neural-card p {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}

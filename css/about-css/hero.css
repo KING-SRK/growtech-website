@@ -108,7 +108,6 @@
   }
 
   .hero-description {
-    text-align: center;
     font-size: 1rem;
   }
 
@@ -121,6 +120,10 @@
 @media (max-width: 768px) {
   .about-hero {
     padding: 70px 20px;
+  }
+
+  .section-header h2{
+    text-align: justify;
   }
 
   .hero-title {

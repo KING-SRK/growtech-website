@@ -60,6 +60,9 @@
   border-radius: 25px;
   backdrop-filter: blur(10px);
   transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .glass-card-item i {
@@ -79,6 +82,7 @@
   font-size: 0.9rem;
   color: #9ca3af;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* Overlapping Positions */

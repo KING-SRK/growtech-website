@@ -64,15 +64,19 @@
 
 /* Positioning orbit items */
 .tech-1 {
-  transform: rotate(0deg) translate(110px) rotate(-50deg);
+  transform: rotate(-5deg) translate(130px) rotate(0deg);
 }
 
 .tech-2 {
-  transform: rotate(120deg) translate(130px) rotate(-120deg);
+  transform: rotate(100deg) translate(130px) rotate(-90deg);
 }
 
 .tech-3 {
-  transform: rotate(240deg) translate(180px) rotate(-240deg);
+  transform: rotate(190deg) translate(170px) rotate(-190deg);
+}
+
+.tech-4 {
+  transform: rotate(280deg) translate(130px) rotate(-90deg);
 }
 
 @keyframes rotateOrbit {
@@ -132,7 +136,7 @@
 .stat-box h3 {
   font-size: 32px;
   margin-bottom: 5px;
-  font-family: "Bungee", cursive;
+  font-family: "Inter", sans-serif;
 }
 
 .stat-box span {
@@ -194,15 +198,20 @@
     height: 100px;
   }
 
-  /* আইকন পজিশন মোবাইলের জন্য সামান্য অ্যাডজাস্ট */
   .tech-1 {
-    transform: rotate(0deg) translate(95px) rotate(-100deg);
+    transform: rotate(-5deg) translate(100px) rotate(0deg);
   }
+
   .tech-2 {
-    transform: rotate(120deg) translate(110px) rotate(-120deg);
+    transform: rotate(100deg) translate(100px) rotate(-90deg);
   }
+
   .tech-3 {
-    transform: rotate(240deg) translate(140px) rotate(-180deg);
+    transform: rotate(190deg) translate(150px) rotate(-190deg);
+  }
+
+  .tech-4 {
+    transform: rotate(280deg) translate(100px) rotate(-90deg);
   }
 
   .stats-row {
@@ -233,15 +242,26 @@
     height: 80px;
   }
 
+  .orbit-item {
+    width: 40px;
+    height: 40px;
+  }
+
   /* সবথেকে ছোট ফোনে আইকন ডিসট্যান্স আরও কমবে */
   .tech-1 {
-    transform: rotate(0deg) translate(75px) rotate(-100deg);
+    transform: rotate(-5deg) translate(70px) rotate(0deg);
   }
+
   .tech-2 {
-    transform: rotate(120deg) translate(85px) rotate(-120deg);
+    transform: rotate(100deg) translate(70px) rotate(-90deg);
   }
+
   .tech-3 {
-    transform: rotate(240deg) translate(100px) rotate(-150deg);
+    transform: rotate(190deg) translate(120px) rotate(-190deg);
+  }
+
+  .tech-4 {
+    transform: rotate(280deg) translate(70px) rotate(-90deg);
   }
 
   .stats-row {

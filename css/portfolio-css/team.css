@@ -1,0 +1,111 @@
+.gt-team-universe {
+  padding: 100px 0;
+  background-color: #0d102a;
+  perspective: 1000px; /* 3D effect এর জন্য জরুরি */
+}
+
+.gt-team-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding-top: 50px;
+}
+
+.gt-team-card {
+  height: 350px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.gt-team-card:hover .card-inner {
+  transform: rotateY(180deg); /* হোভার করলে কার্ড ঘুরে যাবে */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* পেছনের অংশ লুকানোর জন্য */
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.card-front {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+}
+
+.card-back {
+  background: #c9a86a; /* তোমাদের সিগনেচার গোল্ড কালার */
+  color: #000;
+  transform: rotateY(180deg);
+}
+
+.user-img-box {
+  width: 100px;
+  height: 100px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #c9a86a;
+  margin-bottom: 20px;
+  border: 2px dashed #c9a86a;
+}
+
+.card-front h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 5px;
+
+  font-weight: 800;
+  display: inline;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.card-front span {
+  color: #c9a86a;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card-back p {
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  font-size: 24px;
+  color: #000;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
