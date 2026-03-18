@@ -13,9 +13,56 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #fff;
   line-height: 1.6;
+  cursor: none;
+}
+
+/* মাঝখানের ছোট বিন্দু */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #00ffff; /* সায়ান কালার */
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none; /* যাতে ক্লিকে বাধা না দেয় */
+}
+
+/* বাইরের বড় সার্কেল */
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #c9a86a; /* গোল্ডেন বর্ডার */
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9998;
+  pointer-events: none;
+  transition: all 0.15s ease-out; /* হালকা ল্যাগ এফেক্ট যেটা দেখতে স্মুথ লাগে */
+}
+
+
+/* লিঙ্কে হোভার করলে যে এফেক্ট হবে */
+.cursor-hover {
+  width: 80px !important; /* ছবির ওপর গেলে একটু বেশি বড় হবে */
+  height: 80px !important;
+  background-color: rgba(0, 255, 255, 0.1); /* হালকা সায়ান আভা */
+  border-color: #00ffff !important;
+  transition:
+    width 0.3s,
+    height 0.3s,
+    background-color 0.3s;
 }
 
 main {
@@ -23,6 +70,40 @@ main {
   width: 100%;
   overflow-x: hidden;
 }
+
+/* --- Premium Glowing Text Selection --- */
+
+/* Modern Browsers (Chrome, Edge, Safari) */
+::selection {
+  background: rgba(
+    0,
+    255,
+    255,
+    0.2
+  ); /* সায়ান কালারের হালকা স্বচ্ছ ব্যাকগ্রাউন্ড */
+  color: #00ffff; /* টেক্সট নিজে সায়ান হয়ে যাবে */
+  text-shadow:
+    0 0 10px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.4); /* ডাবল লেয়ার নিয়ন গ্লো এফেক্ট */
+}
+
+/* Firefox এর জন্য (একই এফেক্ট) */
+::-moz-selection {
+  background: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+  text-shadow:
+    0 0 10px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* যদি গোল্ডেন লাক্সারি ভাইব চাস, তবে নিচেরটা ব্যবহার করবি (যেকোনো একটা রাখিস) */
+/*
+::selection {
+    background: rgba(201, 168, 106, 0.25); 
+    color: #ffd700; 
+    text-shadow: 0 0 12px rgba(201, 168, 106, 0.9);
+}
+*/
 
 .section-header {
   margin-bottom: 30px;
@@ -74,6 +155,60 @@ h2 span {
   background: linear-gradient(90deg, #ffd700, #ff8c00, #ffd700);
   background-size: 200% 100%;
   animation: premiumLineAnim 3s linear infinite;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* --- Custom Scrollbar Styles --- */
+
+/* ১. পুরো স্ক্রলবারটার উইডথ (চওড়া কতটুকু হবে) */
+::-webkit-scrollbar {
+  width: 10px; /* ল্যাপটপ বা ডেস্কটপের জন্য ১০ পিক্সেল একদম আদর্শ */
+}
+
+/* ২. স্ক্রলবার ট্রাক (পেছনের রাস্তাটা) */
+::-webkit-scrollbar-track {
+  background: #0d102a; /* তোর সাইটের ডার্ক ব্যাকগ্রাউন্ড কালার */
+}
+
+/* ৩. স্ক্রলবার থাম্ব (যেটা দিয়ে আমরা টানি) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    #c9a86a,
+    #00ffff
+  ); /* গোল্ড থেকে সায়ান গ্রেডিয়েন্ট */
+  border-radius: 10px; /* কোণাগুলো গোল করার জন্য */
+  border: 2px solid #0d102a; /* ট্রাকের সাথে একটু ফাঁকা বা গ্যাপ রাখার জন্য */
+}
+
+/* ৪. মাউস যখন থাম্বের ওপর যাবে (Hover Effect) */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    #00ffff,
+    #c9a86a
+  ); /* কালার উল্টে যাবে */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* হালকা গ্লো হবে */
 }
 
 /* --- Responsive Styles for Headers --- */
