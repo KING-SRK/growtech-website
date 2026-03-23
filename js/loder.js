@@ -14,6 +14,7 @@ window.addEventListener("load", function () {
   // ১ সেকেন্ড পর সরিয়ে দেওয়া (যাতে সুন্দর করে দেখা যায়)
   setTimeout(() => {
     loader.style.opacity = "0";
+    document.body.style.overflow = "auto";
     setTimeout(() => {
       loader.style.display = "none";
     }, 500); // ভ্যানিশ হওয়ার ট্রানজিশন টাইম
