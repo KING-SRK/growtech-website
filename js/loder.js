@@ -7,16 +7,25 @@ fetch("/html/loder.html")
   })
   .catch((error) => console.log("Loader load hote somosya: ", error));
 
-// পেজ লোড হয়ে গেলে লোডার সরিয়ে ফেলার জন্য
 window.addEventListener("load", function () {
   const loader = document.getElementById("loader-placeholder");
+  const mainContent = document.getElementById("main-content"); // মেইন কন্টেন্ট ধরলাম
 
-  // ১ সেকেন্ড পর সরিয়ে দেওয়া (যাতে সুন্দর করে দেখা যায়)
   setTimeout(() => {
-    loader.style.opacity = "0";
-    document.body.style.overflow = "auto";
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500); // ভ্যানিশ হওয়ার ট্রানজিশন টাইম
+    if (loader) {
+      loader.style.opacity = "0"; // লোডার আবছা হয়ে যাবে
+
+      // ১. মেইন কন্টেন্ট এখন দেখাও
+      if (mainContent) {
+        mainContent.style.display = "block";
+      }
+
+      // ২. স্ক্রল ফিরিয়ে দাও
+      document.body.style.overflow = "auto";
+
+      setTimeout(() => {
+        loader.style.display = "none"; // লোডার পুরোপুরি ভ্যানিশ
+      }, 500);
+    }
   }, 1000);
 });
