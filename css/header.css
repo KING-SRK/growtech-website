@@ -113,35 +113,45 @@
 }
 
 .menu-toggle {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
   z-index: 1001;
   padding: 5px;
+  width: max-content;
 }
 
 .menu-toggle span {
   width: 30px;
-  height: 3px;
-  background: #fff;
+  height: 1.5px;
+  background: #fff; /* এখানে তোমার পছন্দের কালার দাও, আমি ডার্ক ব্লু দিলাম */
   border-radius: 10px;
   transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
+/* মাঝখানের বারটি একটু ছোট দেখানোর জন্য (ছবি অনুযায়ী) */
+.menu-toggle span:nth-child(2) {
+  width: 20px;
+  align-self: flex-end; /* বাম দিকে রাখার জন্য */
+}
+
+/* Active State: যখন ইউজার ক্লিক করবে */
 .menu-toggle.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
-  background: var(--primary-cyan);
+  background: cyan; /* তুমি চাইলে var(--primary-cyan) ব্যবহার করতে পারো */
 }
 
 .menu-toggle.active span:nth-child(2) {
+  width: 0;
   opacity: 0;
   transform: translateX(-20px);
 }
 
 .menu-toggle.active span:nth-child(3) {
+  width: 30px; /* ক্রস তৈরি করার জন্য আবার ফুল উইডথ */
   transform: translateY(-9px) rotate(-45deg);
-  background: var(--primary-cyan);
+  background: cyan;
 }
 
 .fake-header {

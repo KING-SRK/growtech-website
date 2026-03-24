@@ -67,6 +67,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 50px;
+  padding: 0 20px;
 }
 
 .premium-contact-card {
@@ -138,6 +139,7 @@
   gap: 30px;
   margin-top: 60px;
   flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .info-pill {
@@ -154,6 +156,7 @@
   color: var(--gold);
 }
 .info-pill span {
+  color: #9ca3af;
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -161,6 +164,7 @@
 /* CTA Section */
 .contact-cta-section {
   margin-top: 100px;
+  padding: 0 20px;
 }
 .contact-cta-card {
   text-align: center;
