@@ -196,8 +196,8 @@
   }
 
   .premium-btn {
-    padding: 14px 28px;
-    width: 100%; /* মোবাইলে বাটন ফুল উইডথ থাকলে ক্লিক করতে সুবিধা */
+    padding: 10px 20px;
+    width: 80%; /* মোবাইলে বাটন ফুল উইডথ থাকলে ক্লিক করতে সুবিধা */
     justify-content: center;
   }
 }

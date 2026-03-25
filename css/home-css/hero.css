@@ -1,3 +1,175 @@
+:root {
+  --primary: #0044cc;
+  --dark: #001f4d;
+  --light: #f0f4ff;
+  --text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #001f4d;
+  line-height: 1.6;
+  cursor: none;
+  margin: 0;
+  background-color: #4f8edb;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #00ffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #c9a86a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9998;
+  pointer-events: none;
+  transition: all 0.15s ease-out;
+}
+
+.cursor-hover {
+  width: 80px !important;
+  height: 80px !important;
+  background-color: rgba(0, 255, 255, 0.1);
+  border-color: #00ffff !important;
+  transition:
+    width 0.3s,
+    height 0.3s,
+    background-color 0.3s;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#main-content {
+  display: none;
+}
+
+::selection {
+  background: rgba(0, 255, 255, 0.2);
+  color: #00ffff;
+  text-shadow:
+    0 0 10px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+::-moz-selection {
+  background: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+  text-shadow:
+    0 0 10px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.section-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-header h2,
+.vision-section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 10px 0;
+  display: inline;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.vision-section-header {
+  margin-bottom: 30px;
+}
+
+h2 span,
+h1 span {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to top, #363a3f, #fff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.premium-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #ffd700, #ff8c00, #ffd700);
+  background-size: 200% 100%;
+  animation: premiumLineAnim 3s linear infinite;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d102a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #c9a86a, #00ffff);
+  border-radius: 10px;
+  border: 2px solid #0d102a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #00ffff, #c9a86a);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
 .hero-section {
   width: 100%;
   min-height: auto;
@@ -30,22 +202,13 @@
   font-family: "Inter", sans-serif;
   font-weight: 800;
   letter-spacing: -0.03em;
-
   display: inline;
   background-image: linear-gradient(to top, #363a3f, #fff 60%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-}
-
-.hero-content h1 span {
-  padding-right: 15px;
-  font-size: 4rem;
-  font-style: italic;
-  text-transform: uppercase;
 }
 
 .hero-content p {
@@ -131,39 +294,55 @@
   border-color: #00ffff;
 }
 
-/* Responsive Styles for Grow Tech Hero Section */
-
 @media (max-width: 1024px) {
+  .section-header h2,
+  .vision-section-header h2 {
+    font-size: 2.2rem;
+  }
+  h2 span {
+    font-size: 2rem;
+  }
   .hero-container {
     padding: 80px 20px;
     flex-direction: column;
     text-align: center;
   }
-
   .hero-content {
     width: 100%;
     margin-bottom: 50px;
   }
-
   .hero-content h1 {
     font-size: 3.5rem;
     line-height: 4rem;
   }
-
-  .hero-content h1 span {
-    font-size: 3rem;
-  }
-
   .hero-btns {
     justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
+  .section-header,
+  .vision-section-header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .section-header h2,
+  .vision-section-header h2 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  h2 span {
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  .premium-divider {
+    width: 80%;
+    margin: 0 auto;
+  }
   .hero-section {
     background-position: right center;
   }
-
   .hero-section::after {
     content: "";
     position: absolute;
@@ -171,63 +350,65 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 17, 40, 0.6); /* এখানে 0.6 মানে ৬০% ঢাকা থাকবে */
+    background: rgba(10, 17, 40, 0.6);
     z-index: 1;
   }
-
   .hero-container {
     padding: 50px 20px;
     position: relative;
     z-index: 2;
   }
-
   .hero-content h1 {
     font-size: 2.8rem;
     line-height: 3.2rem;
   }
-
-  .hero-content h1 span {
-    font-size: 2.2rem;
-    display: inline-block;
-    margin-top: 10px;
-  }
-
   .hero-content p {
     font-size: 1.1rem;
   }
-
   .hero-btns {
     gap: 20px;
-  }
-
-  .hero-btn,
-  .hero-btn-secondary {
-    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
+  .section-header h2,
+  .vision-section-header h2 {
+    font-size: 1.8rem;
+    letter-spacing: 0px;
+  }
+  h2 span {
+    font-size: 1.4rem;
+  }
+  .premium-divider {
+    width: 90%;
+  }
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
   .hero-content {
     margin-bottom: 0;
   }
-  
   .hero-content h1 {
     font-size: 2.2rem;
     line-height: 2.2rem;
   }
-
-  .hero-content h1 span {
-    font-size: 1.8rem;
-  }
-
   .hero-btns {
     flex-direction: column;
   }
-
   .hero-btn,
   .hero-btn-secondary {
     width: 100%;
     text-align: center;
     padding: 0.7rem 2rem;
+  }
+}
+
+@keyframes premiumLineAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
   }
 }

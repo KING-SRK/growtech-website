@@ -359,30 +359,100 @@
   object-fit: cover;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .gt-app-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  .gt-container {
+    padding: 0 40px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 992px) {
+  .gt-portfolio-main-title {
+    font-size: 3rem;
+  }
+  .gt-app-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gt-clean-app-universe {
+    padding: 40px 0;
+  }
+  .gt-portfolio-hero {
+    margin-bottom: 50px;
+  }
+  .gt-portfolio-main-title {
+    font-size: 2.5rem;
+  }
   .gt-app-grid {
     grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .gt-glass-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(13, 16, 42, 0.95) 0%,
+      rgba(13, 16, 42, 0) 50%
+    );
+    backdrop-filter: none;
+    justify-content: flex-end;
+    padding-bottom: 30px;
   }
   .gt-action-group {
-    flex-direction: column;
     width: 100%;
   }
   .gt-btn {
-    width: 100%;
+    padding: 10px;
+    font-size: 13px;
   }
   .android-device {
     width: 240px;
     height: 500px;
+    border-width: 8px;
   }
   .gt-close-x {
+    top: -40px;
     right: 0;
-    top: -60px;
+    font-size: 35px;
+  }
+  .gt-card-visual {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .gt-container {
+    padding: 0 20px;
+  }
+  .gt-portfolio-main-title {
+    font-size: 2rem;
+  }
+  .gt-portfolio-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  .gt-app-details {
+    padding: 20px;
+  }
+  .gt-app-details h3 {
+    font-size: 1.1rem;
+  }
+  .gt-tag {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+  .gt-app-features li {
+    font-size: 0.8rem;
+    gap: 10px;
+  }
+  .android-device {
+    width: 220px;
+    height: 460px;
   }
 }

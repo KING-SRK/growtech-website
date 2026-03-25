@@ -222,3 +222,85 @@
   cursor: pointer;
   z-index: 10;
 }
+
+@media (max-width: 1024px) {
+  .gt-game-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .gt-portfolio-main-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gt-game-universe {
+    padding: 50px 0;
+  }
+
+  .gt-portfolio-hero {
+    margin-bottom: 40px;
+  }
+
+  .gt-portfolio-main-title {
+    font-size: 2.2rem;
+  }
+
+  .gt-game-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .gt-game-overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: flex-end;
+    padding-bottom: 20px;
+  }
+
+  .gt-action-group {
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+  }
+
+  .gt-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .gt-modal-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gt-portfolio-subtitle {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .gt-portfolio-main-title {
+    font-size: 1.8rem;
+  }
+
+  .gt-game-visual {
+    height: 180px;
+  }
+
+  .gt-game-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .gt-tag {
+    padding: 2px 8px;
+    font-size: 10px;
+  }
+
+  .gt-action-group {
+    gap: 8px;
+  }
+}

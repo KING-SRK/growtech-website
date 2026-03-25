@@ -249,11 +249,6 @@ html.lenis body {
     display: inline-block; /* স্প্যান ট্যাগটাকে নিচে নামিয়ে দিলে পড়তে সুবিধা হয় */
     margin-top: 5px;
   }
-
-  .premium-divider {
-    width: 80%; /* মোবাইলে পুরোটা না রেখে একটু ছোট করলে কিউট লাগে */
-    margin: 0 auto;
-  }
 }
 
 /* একদম ছোট ফোনের জন্য (480px) */
@@ -266,10 +261,6 @@ html.lenis body {
 
   h2 span {
     font-size: 1.4rem;
-  }
-
-  .premium-divider {
-    width: 90%;
   }
 
   .cursor-dot, .cursor-outline {
