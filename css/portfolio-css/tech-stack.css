@@ -100,3 +100,59 @@
 .gt-stack-card:hover::before {
   opacity: 1;
 }
+
+/* =========================================
+   GT TECH STACK RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1024px) {
+  .gt-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .gt-tech-stack {
+    padding: 60px 0;
+  }
+
+  .gt-stack-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px; /* মোবাইলে কার্ডগুলো যাতে খুব বেশি চওড়া না হয় */
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .gt-stack-card {
+    padding: 30px 20px;
+  }
+
+  .stack-icon {
+    font-size: 40px;
+  }
+
+  .gt-stack-card h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gt-tech-stack {
+    padding: 40px 0;
+  }
+
+  .gt-stack-card {
+    border-radius: 15px;
+  }
+
+  .gt-stack-card p {
+    font-size: 0.85rem;
+  }
+
+  .stack-badge {
+    font-size: 0.65rem;
+    padding: 4px 12px;
+  }
+}

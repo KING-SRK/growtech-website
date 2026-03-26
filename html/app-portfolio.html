@@ -24,149 +24,153 @@
   </head>
   <body>
     <div id="loader-placeholder"></div>
-    <section class="gt-clean-app-universe">
-      <div class="gt-container">
-        <div class="gt-portfolio-hero">
-          <span class="gt-portfolio-subtitle">Mobile Excellence</span>
-          <div class="section-header">
-            <h2>App Universe</h2>
+
+    <main id="main-content">
+      <section class="gt-clean-app-universe">
+        <div class="gt-container">
+          <div class="gt-portfolio-hero">
+            <span class="gt-portfolio-subtitle">Mobile Excellence</span>
+            <div class="section-header">
+              <h2>App Universe</h2>
+            </div>
+            <div class="gt-gold-divider"></div>
           </div>
-          <div class="gt-gold-divider"></div>
+
+          <div class="gt-app-grid">
+            <div class="gt-app-card">
+              <div class="gt-card-visual">
+                <img src="/projects-images/travello.png" alt="E-Commerce App" />
+                <div class="gt-glass-overlay">
+                  <div class="gt-action-group">
+                    <a
+                      href="javascript:void(0)"
+                      class="gt-btn gt-view-btn"
+                      onclick="openVideo('/videos/travello.mp4')"
+                      >View Live</a
+                    >
+                    <a
+                      href="/download-apps/travello.apk"
+                      class="gt-btn gt-download-btn"
+                      >Get App</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="gt-app-details">
+                <h3>
+                  Simple UI Kit <span class="travello-highlight">Travello</span>
+                </h3>
+
+                <div class="gt-app-features">
+                  <span class="gt-feature-label">Key Features:</span>
+                  <ul>
+                    <li>Login / Registration Integrated</li>
+                    <li>Application handle multiple pages</li>
+                    <li>User can check user data in home page</li>
+                    <li>A simple demo traveling app</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="gt-app-card">
+              <div class="gt-card-visual">
+                <img src="/projects-images/chat-app.png" alt="Fitness App" />
+                <div class="gt-glass-overlay">
+                  <div class="gt-action-group">
+                    <a
+                      href="javascript:void(0)"
+                      class="gt-btn gt-view-btn"
+                      onclick="openVideo('/videos/chat-app.mp4')"
+                      >View Live</a
+                    >
+                    <a
+                      href="/download-apps/chat-app.apk"
+                      class="gt-btn gt-download-btn"
+                      >Get App</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="gt-app-details">
+                <h3>Demo <span class="chat-highlight">Chat App</span></h3>
+
+                <div class="gt-app-features">
+                  <span class="gt-feature-label">Key Features:</span>
+                  <ul>
+                    <li>Login / Registration Integrated</li>
+                    <li>Multi pages heandling by app</li>
+                    <li>A demo chat logic intrigated</li>
+                    <li>Email-Password / Google Authentication</li>
+                    <li>Theme feture intrigated</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="gt-app-card">
+              <div class="gt-card-visual">
+                <img src="/projects-images/app-img2.jpeg" alt="Fitness App" />
+                <div class="gt-glass-overlay">
+                  <div class="gt-action-group">
+                    <a
+                      href="javascript:void(0)"
+                      class="gt-btn gt-view-btn"
+                      onclick="openVideo('/videos/chat-app.mp4')"
+                      >View Live</a
+                    >
+                    <a
+                      href="/download-apps/fruzz-digi.apk"
+                      class="gt-btn gt-download-btn"
+                      >Get App</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="gt-app-details">
+                <h3>
+                  Login / Register Screen
+                  <span class="fruzz-highlight">Fruzz Digital</span>
+                </h3>
+
+                <div class="gt-app-features">
+                  <span class="gt-feature-label">Key Features:</span>
+                  <ul>
+                    <li>Login / Registration Integrated</li>
+                    <li>Email-Password / Google Authentication</li>
+                    <li>User data editable feture added</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="gt-app-grid">
-          <div class="gt-app-card">
-            <div class="gt-card-visual">
-              <img src="/projects-images/travello.png" alt="E-Commerce App" />
-              <div class="gt-glass-overlay">
-                <div class="gt-action-group">
-                  <a
-                    href="javascript:void(0)"
-                    class="gt-btn gt-view-btn"
-                    onclick="openVideo('/videos/travello.mp4')"
-                    >View Live</a
-                  >
-                  <a
-                    href="/download-apps/travello.apk"
-                    class="gt-btn gt-download-btn"
-                    >Get App</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="gt-app-details">
-              <h3>
-                Simple UI Kit <span class="travello-highlight">Travello</span>
-              </h3>
+      <div id="videoModal" class="gt-modal">
+        <div class="gt-modal-blur-bg" onclick="closeVideo()"></div>
 
-              <div class="gt-app-features">
-                <span class="gt-feature-label">Key Features:</span>
-                <ul>
-                  <li>Login / Registration Integrated</li>
-                  <li>Application handle multiple pages</li>
-                  <li>User can check user data in home page</li>
-                  <li>A simple demo traveling app</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="gt-modal-content">
+          <button class="gt-close-x" onclick="closeVideo()">
+            <i class="bx bx-x"></i>
+          </button>
 
-          <div class="gt-app-card">
-            <div class="gt-card-visual">
-              <img src="/projects-images/chat-app.png" alt="Fitness App" />
-              <div class="gt-glass-overlay">
-                <div class="gt-action-group">
-                  <a
-                    href="javascript:void(0)"
-                    class="gt-btn gt-view-btn"
-                    onclick="openVideo('/videos/chat-app.mp4')"
-                    >View Live</a
-                  >
-                  <a
-                    href="/download-apps/chat-app.apk"
-                    class="gt-btn gt-download-btn"
-                    >Get App</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="gt-app-details">
-              <h3>Demo <span class="chat-highlight">Chat App</span></h3>
-
-              <div class="gt-app-features">
-                <span class="gt-feature-label">Key Features:</span>
-                <ul>
-                  <li>Login / Registration Integrated</li>
-                  <li>Multi pages heandling by app</li>
-                  <li>A demo chat logic intrigated</li>
-                  <li>Email-Password / Google Authentication</li>
-                  <li>Theme feture intrigated</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="gt-app-card">
-            <div class="gt-card-visual">
-              <img src="/projects-images/app-img2.jpeg" alt="Fitness App" />
-              <div class="gt-glass-overlay">
-                <div class="gt-action-group">
-                  <a
-                    href="javascript:void(0)"
-                    class="gt-btn gt-view-btn"
-                    onclick="openVideo('/videos/chat-app.mp4')"
-                    >View Live</a
-                  >
-                  <a
-                    href="/download-apps/fruzz-digi.apk"
-                    class="gt-btn gt-download-btn"
-                    >Get App</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="gt-app-details">
-              <h3>
-                Login / Register Screen
-                <span class="fruzz-highlight">Fruzz Digital</span>
-              </h3>
-
-              <div class="gt-app-features">
-                <span class="gt-feature-label">Key Features:</span>
-                <ul>
-                  <li>Login / Registration Integrated</li>
-                  <li>Email-Password / Google Authentication</li>
-                  <li>User data editable feture added</li>
-                </ul>
-              </div>
+          <div class="android-device">
+            <div class="android-punch-hole"></div>
+            <div class="android-screen">
+              <video id="appVideo" muted loop playsinline>
+                <source src="/videos/app-video1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <div id="videoModal" class="gt-modal">
-      <div class="gt-modal-blur-bg" onclick="closeVideo()"></div>
+      <div class="cursor-dot"></div>
+      <div class="cursor-outline"></div>
+    </main>
 
-      <div class="gt-modal-content">
-        <button class="gt-close-x" onclick="closeVideo()">
-          <i class="bx bx-x"></i>
-        </button>
-
-        <div class="android-device">
-          <div class="android-punch-hole"></div>
-          <div class="android-screen">
-            <video id="appVideo" muted loop playsinline>
-              <source src="/videos/app-video1.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
     <script src="/js/loder.js"></script>

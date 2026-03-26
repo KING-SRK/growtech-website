@@ -17,93 +17,99 @@
   </head>
   <body>
     <div id="loader-placeholder"></div>
-    <section class="gt-game-universe">
-      <div class="gt-container">
-        <div class="gt-portfolio-hero">
-          <span class="gt-portfolio-subtitle">Level Up Your Experience</span>
-          <div class="section-header">
-            <h2>Web Universe</h2>
-          </div>
-          <div class="gt-gold-divider"></div>
-        </div>
 
-        <div class="gt-game-grid">
-          <div class="gt-game-card">
-            <div class="gt-game-visual">
-              <img
-                src="/projects-images/farmer-runner.png"
-                alt="Game Project"
-              />
-              <div class="gt-game-overlay">
-                <div class="gt-action-group">
-                  <a
-                    href="javascript:void(0)"
-                    class="gt-btn gt-view-btn"
-                    onclick="openVideo('/videos/game-1.mp4')"
-                  >
-                    <i class="bx bx-play-circle"></i> View Trailer
-                  </a>
-                  <a
-                    href="/download-games/Farmer Runner.apk"
-                    class="gt-btn gt-download-btn"
-                  >
-                    <i class="bx bx-download"></i> Download
-                  </a>
+    <main id="main-content">
+      <section class="gt-game-universe">
+        <div class="gt-container">
+          <div class="gt-portfolio-hero">
+            <span class="gt-portfolio-subtitle">Level Up Your Experience</span>
+            <div class="section-header">
+              <h2>Web Universe</h2>
+            </div>
+            <div class="gt-gold-divider"></div>
+          </div>
+
+          <div class="gt-game-grid">
+            <div class="gt-game-card">
+              <div class="gt-game-visual">
+                <img
+                  src="/projects-images/farmer-runner.png"
+                  alt="Game Project"
+                />
+                <div class="gt-game-overlay">
+                  <div class="gt-action-group">
+                    <a
+                      href="javascript:void(0)"
+                      class="gt-btn gt-view-btn"
+                      onclick="openVideo('/videos/game-1.mp4')"
+                    >
+                      <i class="bx bx-play-circle"></i> View Trailer
+                    </a>
+                    <a
+                      href="/download-games/Farmer Runner.apk"
+                      class="gt-btn gt-download-btn"
+                    >
+                      <i class="bx bx-download"></i> Download
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="gt-game-details">
-              <div class="gt-game-header">
-                <h3>Farmer Runner</h3>
-                <span class="gt-rating"><i class="bx bxs-star"></i> 4.9</span>
+              <div class="gt-game-details">
+                <div class="gt-game-header">
+                  <h3>Farmer Runner</h3>
+                  <span class="gt-rating"><i class="bx bxs-star"></i> 4.9</span>
+                </div>
+                <div class="gt-tech-stack">
+                  <span class="gt-tag">Unity</span>
+                  <span class="gt-tag">C#</span>
+                  <span class="gt-tag">Blender</span>
+                </div>
+                <p>
+                  A 2D platformer game where you play as a farmer trying to
+                  escape a zombie apocalypse.
+                </p>
               </div>
-              <div class="gt-tech-stack">
-                <span class="gt-tag">Unity</span>
-                <span class="gt-tag">C#</span>
-                <span class="gt-tag">Blender</span>
-              </div>
-              <p>
-                A 2D platformer game where you play as a farmer trying to escape
-                a zombie apocalypse.
-              </p>
             </div>
-          </div>
 
-          <div class="gt-game-card">
-            <div class="gt-game-visual">
-              <img
-                src="/projects-images/game-coming-soon.png"
-                alt="Game Project"
-              />
-            </div>
-            <div class="gt-game-details">
-              <div class="gt-game-header">
-                <h3>Game Coming Soon</h3>
+            <div class="gt-game-card">
+              <div class="gt-game-visual">
+                <img
+                  src="/projects-images/game-coming-soon.png"
+                  alt="Game Project"
+                />
               </div>
+              <div class="gt-game-details">
+                <div class="gt-game-header">
+                  <h3>Game Coming Soon</h3>
+                </div>
 
-              <p>More games coming soon, stay tuned for the latest updates.</p>
+                <p>
+                  More games coming soon, stay tuned for the latest updates.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div id="videoModal" class="gt-modal">
-      <div class="gt-modal-blur-bg" onclick="closeVideo()"></div>
-      <div class="gt-modal-content">
-        <button class="gt-close-x" onclick="closeVideo()">
-          <i class="bx bx-x"></i>
-        </button>
-        <div class="video-container">
-          <video id="appVideo" controls autoplay muted>
-            <source src="" type="video/mp4" />
-          </video>
+      <div id="videoModal" class="gt-modal">
+        <div class="gt-modal-blur-bg" onclick="closeVideo()"></div>
+        <div class="gt-modal-content">
+          <button class="gt-close-x" onclick="closeVideo()">
+            <i class="bx bx-x"></i>
+          </button>
+          <div class="video-container">
+            <video id="appVideo" controls autoplay muted>
+              <source src="" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+      <div class="cursor-dot"></div>
+      <div class="cursor-outline"></div>
+    </main>
+
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
     <script src="/js/loder.js"></script>

@@ -1,10 +1,15 @@
-/* Grow Tech - Luxury Contact Styles */
+/* =========================================
+   GROW TECH - PREMIUM CONTACT STYLES
+   ========================================= */
+
 :root {
   --contact-bg: #0d102a;
   --card-bg: rgba(255, 255, 255, 0.03);
   --gold: #c9a86a;
   --cyan: #00ffff;
   --border: rgba(201, 168, 106, 0.2);
+  --white: #ffffff;
+  --text-muted: #9ca3af;
 }
 
 .contact-page-wrapper {
@@ -12,213 +17,379 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
+  font-family: "Inter", sans-serif;
 }
 
-/* Background Glow */
+/* Background Glow Effect */
 .bg-glow-top {
   position: absolute;
-  top: -10%;
+  top: -5%;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
+  width: min(600px, 90vw);
   height: 400px;
   background: radial-gradient(
     circle,
-    rgba(0, 255, 255, 0.05) 0%,
+    rgba(0, 255, 255, 0.08) 0%,
     transparent 70%
   );
   pointer-events: none;
+  z-index: 0;
 }
 
-/* Header */
+.contact-main-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
 .contact-premium-header {
   text-align: center;
-  padding: 120px 20px 60px;
+  padding: 100px 20px 40px;
 }
 
 .contact-label {
   color: var(--gold);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
   font-weight: 700;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.section-header h2 span {
+  color: var(--gold);
+  background: linear-gradient(to right, var(--gold), #f3d69b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .contact-subtitle {
-  color: #9ca3af;
-  max-width: 650px;
+  color: var(--text-muted);
+  max-width: 600px;
   margin: 20px auto;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .contact-gold-divider {
   height: 3px;
-  width: 60px;
+  width: 50px;
   background: var(--gold);
-  margin: 30px auto;
+  margin: 25px auto;
   box-shadow: 0 0 15px var(--gold);
+  border-radius: 2px;
 }
 
 /* Contact Cards Grid */
 .contact-cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 50px;
-  padding: 0 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px;
 }
 
 .premium-contact-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  padding: 50px 30px;
-  border-radius: 25px;
+  padding: 45px 30px;
+  border-radius: 24px;
   text-align: center;
-  transition: all 0.4s ease;
-  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .premium-contact-card:hover {
   transform: translateY(-10px);
   border-color: var(--cyan);
   background: rgba(0, 255, 255, 0.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .highlight-card {
+  border-color: rgba(201, 168, 106, 0.4);
+  background: rgba(201, 168, 106, 0.04);
+}
+
+.highlight-card:hover {
   border-color: var(--gold);
-  background: rgba(201, 168, 106, 0.03);
 }
 
 .card-icon-hex {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: var(--gold);
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 8px rgba(201, 168, 106, 0.3));
 }
 
 .premium-contact-card h3 {
-  font-family: "Inter", sans-serif;
-  font-size: 1.7rem;
-  margin-bottom: 8px;
-
+  font-size: 1.4rem;
+  margin-bottom: 12px;
   font-weight: 800;
-  letter-spacing: -1px;
-  display: inline;
-  background-image: linear-gradient(to top, #363a3f, #fff 60%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  color: var(--white);
 }
 
 .premium-contact-card p {
-  color: #9ca3af;
-  font-size: 0.95rem;
-  margin-bottom: 20px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
 }
 
-.card-link {
+/* Action Buttons (Email/WhatsApp/Call) */
+.card-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--cyan);
   color: var(--cyan);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1rem;
-  transition: 0.3s;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.card-link:hover {
-  text-shadow: 0 0 10px var(--cyan);
+.card-action-btn:hover {
+  background: var(--cyan);
+  color: #0d102a;
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.25);
+}
+
+.highlight-card .card-action-btn {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.highlight-card .card-action-btn:hover {
+  background: var(--gold);
+  color: #0d102a;
+  box-shadow: 0 8px 20px rgba(201, 168, 106, 0.25);
 }
 
 /* Bottom Info Pills */
 .contact-bottom-info {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-top: 60px;
+  gap: 20px;
+  margin-top: 50px;
   flex-wrap: wrap;
   padding: 0 20px;
 }
 
 .info-pill {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 12px 25px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px 22px;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.3s;
+}
+
+.info-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .info-pill i {
   color: var(--gold);
+  font-size: 0.9rem;
 }
 .info-pill span {
-  color: #9ca3af;
-  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
-/* CTA Section */
+/* CTA Section Styling */
 .contact-cta-section {
-  margin-top: 100px;
+  margin-top: 80px;
   padding: 0 20px;
 }
+
 .contact-cta-card {
   text-align: center;
-  padding: 70px 40px;
+  padding: 60px 30px;
   border: 1px dashed var(--gold);
-  border-radius: 40px;
+  border-radius: 35px;
+  background: linear-gradient(
+    to bottom,
+    rgba(201, 168, 106, 0.02),
+    transparent
+  );
 }
 
 .contact-cta-card h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin-bottom: 15px;
+  color: var(--white);
 }
 
 .contact-cta-card p {
-  color: #9ca3af;
-  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-size: 1rem;
   margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contact-secondary-btn {
-  border: 1px solid var(--gold);
-  padding: 0.9rem 2rem;
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  position: relative;
-  display: inline-block;
-  letter-spacing: 0.05rem;
+/* Main Premium Button (View Portfolio) */
+.btn-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--cyan);
+  color: #0d102a;
+  padding: 16px 35px;
+  border-radius: 50px;
   font-weight: 700;
-  font-size: 17px;
   text-decoration: none;
-  border-radius: 500px;
-  overflow: hidden;
-  background: transparent;
-  color: var(--gold);
-  transition: 0.4s;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
 }
 
-/* Responsive */
+.btn-main:hover {
+  transform: translateY(-3px);
+  background: var(--white);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.15);
+}
+
+/* =========================================
+   GT CONTACT SECTION RESPONSIVE
+   ========================================= */
+
+/* ট্যাবলেট এবং ছোট ল্যাপটপ (1024px এর নিচে) */
 @media (max-width: 1024px) {
   .contact-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* ২ কলামে দেখাবে */
+    gap: 20px;
+    padding: 0 20px;
   }
 }
 
+/* মোবাইল ফোন (768px এর নিচে) */
 @media (max-width: 768px) {
+  .contact-premium-header {
+    padding: 80px 20px 40px;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
   .contact-cards-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* এক কলামে সব কার্ড */
+    max-width: 100%;
   }
-  .contact-premium-header h2 {
-    font-size: 2rem;
-  }
+
   .premium-contact-card {
-    padding: 40px 20px;
+    padding: 35px 25px;
+  }
+
+  .contact-bottom-info {
+    flex-direction: column; /* তথ্যগুলো নিচে নিচে আসবে */
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+  }
+
+  .contact-cta-card {
+    padding: 50px 20px;
+  }
+
+  .contact-cta-card h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* খুব ছোট ফোন (480px এর নিচে) */
+@media (max-width: 480px) {
+  .contact-premium-header {
+    padding: 60px 15px 30px;
+  }
+
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .card-action-btn {
+    font-size: 0.85rem;
+    padding: 12px 15px;
+    gap: 8px;
+  }
+
+  .info-pill {
+    width: 100%; /* পিলগুলো পুরো স্ক্রিন জুড়ে থাকবে */
+    justify-content: center;
+  }
+
+  .btn-main {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-premium-header {
+    padding-top: 50px;
+  }
+
+  .section-header h2 {
+    font-size: 1.4rem; /* শিরোনাম আরও ছোট করা হলো */
+  }
+
+  .contact-label {
+    letter-spacing: 3px; /* স্পেসিং কমানো হলো যাতে ভেঙে না যায় */
+  }
+
+  .premium-contact-card {
+    padding: 25px 15px; /* প্যাডিং আরও কমানো হলো */
+    border-radius: 18px;
+  }
+
+  .premium-contact-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-action-btn {
+    font-size: 0.75rem; /* টেক্সট সাইজ ছোট করা হলো যাতে ইমেল ধরে যায় */
+    padding: 10px 8px;
+    gap: 5px;
+  }
+
+  .card-action-btn i {
+    font-size: 0.9rem;
+  }
+
+  .contact-cta-card {
+    padding: 30px 15px;
+    border-radius: 25px;
+  }
+
+  .btn-main {
+    font-size: 0.85rem;
+    padding: 12px 20px;
   }
 }

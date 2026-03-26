@@ -114,12 +114,16 @@ main {
 
 h2 span,
 h1 span {
-  font-size: 2.3rem;
+  font-size: 4rem;
+  font-style: italic;
   text-transform: uppercase;
   background-image: linear-gradient(to top, #363a3f, #fff 60%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  line-height: 1.2;
+  display: inline-block;
+  padding-right: 10px;
 }
 
 .premium-divider {
@@ -299,7 +303,8 @@ html.lenis body {
   .vision-section-header h2 {
     font-size: 2.2rem;
   }
-  h2 span {
+  h2 span,
+  h1 span {
     font-size: 2rem;
   }
   .hero-container {
@@ -376,8 +381,11 @@ html.lenis body {
     font-size: 1.8rem;
     letter-spacing: 0px;
   }
-  h2 span {
-    font-size: 1.4rem;
+  h2 span,
+  h1 span {
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-top: 5px;
   }
   .premium-divider {
     width: 90%;

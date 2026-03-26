@@ -1,14 +1,18 @@
 /* ===============================
-   PREMIUM HERO SECTION
+    PREMIUM HERO SECTION
 =================================*/
 .hero-section {
   position: relative;
-  min-height: auto; /* পুরো স্ক্রিন জুড়ে থাকবে */
+  min-height: auto; /* পুরো স্ক্রিন জুড়ে রাখার জন্য vh ব্যবহার করা ভালো */
   overflow: hidden;
   background: #0d102a;
   color: white;
   display: flex;
   align-items: center;
+}
+
+.hero-section-header {
+  margin-bottom: 20px;
 }
 
 /* Video Background */
@@ -27,64 +31,54 @@
   max-width: 1400px;
   margin: auto;
   padding: 100px 5%;
+  width: 100%;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 80px;
+  gap: 60px;
   align-items: center;
 }
 
+/* Typography & Heading Fixes */
 .hero-section-header h2 {
   font-size: 4rem;
   line-height: 4rem;
   font-family: "Inter", sans-serif;
   font-weight: 800;
   letter-spacing: -0.03em;
-
   display: inline;
   background-image: linear-gradient(to top, #363a3f, #fff 60%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 
-.hero-section-header h2 span {
-  padding-right: 15px;
-  font-size: 3.5rem;
+.hero-section-header h2 .accent {
   font-style: italic;
   text-transform: uppercase;
+  font-size: 0.9em; /* মেইন ফন্টের তুলনায় সামান্য ছোট */
+  display: inline-block;
+  padding-right: 10px;
+  color: inherit; /* গ্রেডিয়েন্ট বজায় রাখার জন্য */
 }
 
-/* LEFT SIDE - Typography */
-.hero-left h1 {
-  font-family: cursive;
-  font-size: clamp(2.5rem, 5vw, 4.5rem); /* স্ক্রিন অনুযায়ী সাইজ হবে */
-  font-weight: 500;
-  line-height: 1.1;
-  color: #ffffff;
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-.hero-left h1 .accent {
-  color: #c9a86a; /* তোর সেই গোল্ডেন কালার */
-  text-shadow: 0 0 20px rgba(201, 168, 106, 0.3);
-}
-
+/* LEFT SIDE */
 .mobile-only-desc {
-  display: none; /* ডেক্সটপে লুকানো থাকবে */
+  font-size: 1.1rem;
   color: #cbd5e1;
-  margin-top: 20px;
+  max-width: 500px;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
-/* RIGHT SIDE - Glassmorphism Card */
+/* Glassmorphism Card */
 .hero-right .glass-card {
-  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   padding: 40px;
   border-radius: 24px;
   border: 1px solid rgba(201, 168, 106, 0.2);
@@ -95,18 +89,18 @@
 .hero-right p {
   font-size: 1.1rem;
   color: #cbd5e1;
-  line-height: 1.8;
+  line-height: 1.7;
   margin-bottom: 25px;
 }
 
-.hero-right strong {
-  color: #00ffff; /* সায়ান হাইলাইট */
+.hero-right p span {
+  color: #c9a86a; /* Grow Tech হাইলাইট */
+  font-weight: bold;
 }
 
 /* BUTTONS */
 .hero-btn-primary {
   display: inline-block;
-  margin-top: 40px;
   background: #c9a86a;
   color: #0d102a;
   font-weight: 700;
@@ -118,7 +112,7 @@
 
 .hero-btn-primary:hover {
   background: #ffffff;
-  transform: scale(1.05);
+  transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(201, 168, 106, 0.3);
 }
 
@@ -164,56 +158,47 @@
 }
 
 /* ===============================
-   RESPONSIVE
+    RESPONSIVE DESIGN
 =================================*/
 @media (max-width: 1024px) {
   .hero-grid {
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
   }
-  .hero-left h1 {
-    font-size: 3.5rem;
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-only-desc {
+    margin: 0 auto 30px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
+  .hero-container {
+    padding: 80px 20px;
+  }
+
+  .hero-section-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section-header h2 .accent {
+    margin: 5px 0;
+    padding-right: 0;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-outline {
+    width: 100%;
     text-align: center;
   }
 
-  .hero-right {
-    display: none; /* মোবাইলে শুধু মেইন টাইটেল আর বাটন থাকবে */
+  .hero-curve {
+    display: none;
   }
-
-  .mobile-only-desc {
-    display: block;
-  }
-
-  .hero-left h1 {
-    font-size: 2.8rem;
-  }
-
-  .hero-container {
-    padding: 80px 24px;
-  }
-}
-
-.service-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(201, 168, 106, 0.2);
-  padding: 40px 30px;
-  border-radius: 20px;
-  transition: 0.4s;
-}
-
-.service-card:hover {
-  background: rgba(201, 168, 106, 0.05);
-  border-color: #c9a86a;
-  transform: translateY(-10px);
-}
-
-.service-card h3 {
-  color: #c9a86a;
-  font-family: "Bungee", cursive;
-  margin-top: 20px;
 }

@@ -109,3 +109,63 @@
 .social-links a:hover {
   color: #fff;
 }
+
+/* =========================================
+   GT TEAM UNIVERSE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1024px) {
+  .gt-team-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gt-team-universe {
+    padding: 60px 0;
+  }
+
+  .gt-team-wrapper {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 25px;
+    padding: 0;
+  }
+
+  .gt-team-card {
+    height: 320px;
+  }
+
+  .user-img-box {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
+
+  .card-front h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gt-team-universe {
+    padding: 40px 0;
+  }
+
+  .card-front,
+  .card-back {
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .card-back p {
+    font-size: 0.85rem;
+  }
+
+  .social-links a {
+    font-size: 20px;
+  }
+}
