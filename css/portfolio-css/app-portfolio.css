@@ -1,5 +1,5 @@
 /* =========================================
-   GROW TECH PORTFOLIO - UPDATED CSS
+   GROW TECH PORTFOLIO - FULL & UPDATED CSS
    ========================================= */
 
 :root {
@@ -70,11 +70,26 @@
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
+  position: relative;
 }
 
-.gt-app-card:hover {
-  border-color: var(--gt-cyan);
-  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.05);
+/* ডেক্সটপ হোভার ইফেক্ট */
+@media (min-width: 769px) {
+  .gt-app-card:hover {
+    border-color: var(--gt-cyan);
+    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.05);
+  }
+
+  .gt-app-card:hover .gt-glass-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* মোবাইল/ট্যাবলেট ক্লিক ইফেক্ট (is-active ক্লাসের মাধ্যমে) */
+.gt-app-card.is-active .gt-glass-overlay {
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .gt-card-visual {
@@ -110,10 +125,7 @@
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 10;
-}
-
-.gt-app-card:hover .gt-glass-overlay {
-  opacity: 1;
+  pointer-events: none;
 }
 
 .gt-action-group {
@@ -199,7 +211,7 @@
   box-shadow: 0 4px 12px rgba(0, 255, 255, 0.15);
 }
 
-/* --- App Features (Updated with Premium Dots) --- */
+/* --- App Features (Premium Dots) --- */
 .gt-app-features {
   margin: 15px 0;
   padding: 10px 0;
@@ -227,12 +239,11 @@
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  gap: 15px; /* ডট ও টেক্সটের গ্যাপ */
+  gap: 15px;
   transition: 0.3s ease;
   position: relative;
 }
 
-/* ডট তৈরির সিএসএস */
 .gt-app-features li::before {
   content: "";
   width: 6px;
@@ -244,14 +255,16 @@
   box-shadow: 0 0 6px rgba(201, 168, 106, 0.4);
 }
 
-/* কার্ড হোভার করলে ডট সায়ান হয়ে যাবে */
-.gt-app-card:hover .gt-app-features li::before {
+/* হোভার বা একটিভ কার্ডে ডট সায়ান হবে */
+.gt-app-card:hover .gt-app-features li::before,
+.gt-app-card.is-active .gt-app-features li::before {
   background-color: var(--gt-cyan);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
   transform: scale(1.3);
 }
 
-.gt-app-card:hover .gt-app-features li {
+.gt-app-card:hover .gt-app-features li,
+.gt-app-card.is-active .gt-app-features li {
   color: #fff;
 }
 
@@ -359,6 +372,7 @@
   object-fit: cover;
 }
 
+/* --- Media Queries --- */
 @media (max-width: 1200px) {
   .gt-app-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -382,9 +396,6 @@
   .gt-clean-app-universe {
     padding: 40px 0;
   }
-  .gt-portfolio-hero {
-    margin-bottom: 50px;
-  }
   .gt-portfolio-main-title {
     font-size: 2.5rem;
   }
@@ -393,17 +404,21 @@
     max-width: 500px;
     margin: 0 auto;
   }
+
   .gt-glass-overlay {
-    opacity: 1;
-    background: linear-gradient(
-      to top,
-      rgba(13, 16, 42, 0.95) 0%,
-      rgba(13, 16, 42, 0) 50%
-    );
+    opacity: 0;
+    pointer-events: none;
     backdrop-filter: none;
     justify-content: flex-end;
     padding-bottom: 30px;
   }
+
+  /* মোবাইলে হোভার লজিক বন্ধ রাখতে হবে যাতে ক্লিকে বাধা না দেয় */
+  .gt-app-card:hover .gt-glass-overlay {
+    opacity: 0;
+    pointer-events: none;
+  }
+
   .gt-action-group {
     width: 100%;
   }
@@ -452,7 +467,7 @@
     gap: 10px;
   }
   .android-device {
-    width: 220px;
-    height: 460px;
+    width: 250px;
+    height: 500px;
   }
 }

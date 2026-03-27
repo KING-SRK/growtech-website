@@ -1,3 +1,7 @@
+/* =========================================
+   GROW TECH GAME UNIVERSE - UPDATED CSS
+   ========================================= */
+
 :root {
   --gt-bg: #0d102a;
   --gt-gold: #c9a86a;
@@ -64,11 +68,35 @@
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
 }
 
-.gt-game-card:hover {
+/* --- ডেস্কটপ হোভার লজিক (769px এর উপরে) --- */
+@media (min-width: 769px) {
+  .gt-game-card:hover {
+    border-color: var(--gt-neon);
+    box-shadow: 0 10px 30px rgba(188, 19, 254, 0.2);
+  }
+
+  .gt-game-card:hover .gt-game-visual img {
+    transform: scale(1.1);
+  }
+
+  .gt-game-card:hover .gt-game-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* --- মোবাইল ক্লিক লজিক (is-active ক্লাসের মাধ্যমে) --- */
+.gt-game-card.is-active .gt-game-overlay {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.gt-game-card.is-active {
   border-color: var(--gt-neon);
-  box-shadow: 0 10px 30px rgba(188, 19, 254, 0.2);
 }
 
 .gt-game-visual {
@@ -84,24 +112,23 @@
   transition: 0.5s;
 }
 
-.gt-game-card:hover .gt-game-visual img {
-  transform: scale(1.1);
-}
-
 /* Overlay & Buttons */
 .gt-game-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(
+    0,
+    0,
+    0,
+    0.85
+  ); /* একটু বেশি ডার্ক যাতে বাটন পরিষ্কার দেখা যায় */
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: 0.4s;
-}
-
-.gt-game-card:hover .gt-game-overlay {
-  opacity: 1;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .gt-action-group {
@@ -127,6 +154,7 @@
 }
 
 .gt-download-btn {
+  background: transparent;
   border: 2px solid var(--gt-neon);
   color: var(--gt-neon);
 }
@@ -223,14 +251,11 @@
   z-index: 10;
 }
 
+/* --- Media Queries --- */
 @media (max-width: 1024px) {
   .gt-game-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-  }
-
-  .gt-portfolio-main-title {
-    font-size: 2.8rem;
   }
 }
 
@@ -238,69 +263,33 @@
   .gt-game-universe {
     padding: 50px 0;
   }
-
-  .gt-portfolio-hero {
-    margin-bottom: 40px;
-  }
-
   .gt-portfolio-main-title {
     font-size: 2.2rem;
   }
-
   .gt-game-grid {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
   }
 
+  /* মোবাইলে হোভার বন্ধ */
+  .gt-game-card:hover .gt-game-overlay {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* ওভারলে কাস্টমাইজেশন মোবাইলের জন্য */
   .gt-game-overlay {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.4);
-    align-items: flex-end;
-    padding-bottom: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
   }
 
   .gt-action-group {
-    flex-direction: row;
-    width: 90%;
-    justify-content: center;
+    flex-direction: column; /* গেমিং বাটনের জন্য কলাম ভালো লাগে */
+    width: 80%;
   }
 
   .gt-btn {
-    flex: 1;
-    padding: 10px;
-    font-size: 12px;
-  }
-
-  .gt-modal-content {
-    width: 95%;
-  }
-}
-
-@media (max-width: 480px) {
-  .gt-portfolio-subtitle {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-
-  .gt-portfolio-main-title {
-    font-size: 1.8rem;
-  }
-
-  .gt-game-visual {
-    height: 180px;
-  }
-
-  .gt-game-header h3 {
-    font-size: 1.1rem;
-  }
-
-  .gt-tag {
-    padding: 2px 8px;
-    font-size: 10px;
-  }
-
-  .gt-action-group {
-    gap: 8px;
+    width: 100%;
   }
 }
