@@ -225,12 +225,18 @@
 
 .gt-modal-content {
   position: relative;
-  width: 90%;
-  max-width: 800px;
+  width: 450px; /* লম্বালম্বি স্ক্রিনের জন্য চওড়া কমানো হলো */
+  max-width: 90%;
+  height: auto;
   background: #000;
-  border-radius: 15px;
+  border-radius: 30px; /* মোবাইলের মতো রাউন্ডেড কর্নার */
   overflow: hidden;
-  border: 1px solid var(--gt-cyan);
+  border: 4px solid #1e2235; /* ফোনের ফ্রেমের মতো বর্ডার */
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  rotate: -90deg;
 }
 
 .video-container video {
@@ -260,6 +266,9 @@
 }
 
 @media (max-width: 768px) {
+  .gt-modal-content {
+    rotate: 0deg;
+  }
   .gt-game-universe {
     padding: 50px 0;
   }
