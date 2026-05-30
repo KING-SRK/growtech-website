@@ -36,10 +36,75 @@
             <div class="gt-gold-divider"></div>
           </div>
 
+          <!-- =========================================
+           ১. COMPLETED PROJECTS SECTION
+           ========================================= -->
+          <div class="gt-section-title-container">
+            <h3 class="gt-status-title">
+              <i class="bx bx-check-circle completed-icon"></i> Completed
+              Projects
+            </h3>
+          </div>
+
+          <!-- App 1: Travello -->
+          <div class="gt-app-grid">
+            <!-- App 4: Task Manager (In Progress উদাহরণ হিসেবে এখানে রাখা হলো) -->
+            <div class="gt-app-card gt-project-in-progress">
+              <div class="gt-card-visual">
+                <img
+                  src="/projects-images/task-manager.jpeg"
+                  alt="Task Manager App"
+                />
+                <div class="gt-glass-overlay">
+                  <div class="gt-action-group">
+                    <!-- প্রগ্রেস প্রোজেক্টের জন্য চাইলে বাটন বা টেক্সট কাস্টমাইজ করতে পারো -->
+                    <a
+                      href="javascript:void(0)"
+                      class="gt-btn gt-view-btn"
+                      onclick="openVideo('/videos/task-manager.mp4')"
+                      >View Demo</a
+                    >
+                    <a
+                      href="/download-apps/task-manager.apk"
+                      class="gt-btn gt-download-btn"
+                      >Get App</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="gt-app-details">
+                <h3>
+                  Advanced <span style="color: #ffb834">Task Manager</span>
+                </h3>
+
+                <div class="gt-app-features">
+                  <span class="gt-feature-label">Planned Features:</span>
+                  <ul>
+                    <li>Task Creation & Management</li>
+                    <li>Goals Creation & Tracking</li>
+                    <li>Importent Notes Creation</li>
+                    <li>List Creation & Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="gt-section-divider" />
+
+          <!-- =========================================
+           ২. IN PROGRESS / UPCOMING SECTION
+           ========================================= -->
+          <div class="gt-section-title-container">
+            <h3 class="gt-status-title">
+              <i class="bx bx-loader-circle progress-icon"></i> Demo Works
+            </h3>
+          </div>
+
           <div class="gt-app-grid">
             <div class="gt-app-card">
               <div class="gt-card-visual">
-                <img src="/projects-images/travello.png" alt="E-Commerce App" />
+                <img src="/projects-images/travello.png" alt="Travello App" />
                 <div class="gt-glass-overlay">
                   <div class="gt-action-group">
                     <a
@@ -73,9 +138,10 @@
               </div>
             </div>
 
+            <!-- App 2: Chat App -->
             <div class="gt-app-card">
               <div class="gt-card-visual">
-                <img src="/projects-images/chat-app.png" alt="Fitness App" />
+                <img src="/projects-images/chat-app.png" alt="Chat App" />
                 <div class="gt-glass-overlay">
                   <div class="gt-action-group">
                     <a
@@ -99,18 +165,22 @@
                   <span class="gt-feature-label">Key Features:</span>
                   <ul>
                     <li>Login / Registration Integrated</li>
-                    <li>Multi pages heandling by app</li>
-                    <li>A demo chat logic intrigated</li>
+                    <li>Multi pages handling by app</li>
+                    <li>A demo chat logic integrated</li>
                     <li>Email-Password / Google Authentication</li>
-                    <li>Theme feture intrigated</li>
+                    <li>Theme feature integrated</li>
                   </ul>
                 </div>
               </div>
             </div>
 
+            <!-- App 3: Fruzz Digital -->
             <div class="gt-app-card">
               <div class="gt-card-visual">
-                <img src="/projects-images/app-img2.jpeg" alt="Fitness App" />
+                <img
+                  src="/projects-images/app-img2.jpeg"
+                  alt="Fruzz Digital App"
+                />
                 <div class="gt-glass-overlay">
                   <div class="gt-action-group">
                     <a
@@ -138,7 +208,7 @@
                   <ul>
                     <li>Login / Registration Integrated</li>
                     <li>Email-Password / Google Authentication</li>
-                    <li>User data editable feture added</li>
+                    <li>User data editable feature added</li>
                   </ul>
                 </div>
               </div>
@@ -147,14 +217,13 @@
         </div>
       </section>
 
+      <!-- Modal Block -->
       <div id="videoModal" class="gt-modal">
         <div class="gt-modal-blur-bg" onclick="closeVideo()"></div>
-
         <div class="gt-modal-content">
           <button class="gt-close-x" onclick="closeVideo()">
             <i class="bx bx-x"></i>
           </button>
-
           <div class="android-device">
             <div class="android-punch-hole"></div>
             <div class="android-screen">
