@@ -80,6 +80,7 @@
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
+  overflow: visible;
 }
 
 .bg-circle {
@@ -94,14 +95,14 @@
   stroke-width: 10;
   stroke-linecap: round;
   /* Circumference for r=85 is approx 534 */
-  stroke-dasharray: 534;
-  stroke-dashoffset: 534;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
   filter: drop-shadow(0 0 10px #00ffff);
   transition: stroke-dashoffset 2.5s ease-in-out;
 }
 
 .gt-neural-stats.active .progress-ring {
-  stroke-dashoffset: calc(534 - (534 * var(--percent)) / 100);
+  stroke-dashoffset: calc(502 - (502 * var(--percent)) / 100);
 }
 
 .neural-info {

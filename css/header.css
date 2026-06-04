@@ -160,6 +160,12 @@
   background-color: #0d102a;
 }
 
+.logo-link {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
 @media (max-width: 1200px) {
   .main-header {
     padding: 0 5%;
