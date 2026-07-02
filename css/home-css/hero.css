@@ -24,44 +24,6 @@ body {
   background-color: #4f8edb;
 }
 
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background-color: #00ffff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 9999;
-  pointer-events: none;
-}
-
-.cursor-outline {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #c9a86a;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 9998;
-  pointer-events: none;
-  transition: all 0.15s ease-out;
-}
-
-.cursor-hover {
-  width: 80px !important;
-  height: 80px !important;
-  background-color: rgba(0, 255, 255, 0.1);
-  border-color: #00ffff !important;
-  transition:
-    width 0.3s,
-    height 0.3s,
-    background-color 0.3s;
-}
-
 main {
   min-height: 100vh;
   width: 100%;
@@ -190,7 +152,7 @@ html.lenis body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 100px 0;
   height: 100%;
